@@ -199,18 +199,31 @@
                 </div>
                 <div class="col-md-4 mb-4 h-100 d-flex flex-column">
                     <h5 class="fw-bold mb-3">ENQUIRY FORM</h5>
-                    <form>
-                        <input type="text" class="form-control mb-2" placeholder="Enter Your Name or Company Name *" required>
-                        <input type="text" class="form-control mb-2" placeholder="Mobile No *" required>
-                        <input type="email" class="form-control mb-2" placeholder="Email ID *" required>
-                        <textarea class="form-control mb-2" rows="2" placeholder="Comments or Enquiry *" required></textarea>
-                        <button type="submit" class="btn btn-dark px-4">SUBMIT</button>
+                    <form action="https://formspree.io/f/xnnprerg" method="POST" target="_blank">
+                        <div class="mb-2">
+                            <label for="footerContactName" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="footerContactName" name="name" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="footerContactEmail" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="footerContactEmail" name="email" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="footerContactPhone" class="form-label">Phone *</label>
+                            <input type="tel" class="form-control" id="footerContactPhone" name="phone" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="footerContactMessage" class="form-label">Message *</label>
+                            <textarea class="form-control" id="footerContactMessage" name="message" rows="2" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark px-4 w-100">Send Message</button>
                     </form>
                 </div>
                 <div class="col-md-4 mb-4 h-100 d-flex flex-column">
                     <h5 class="fw-bold mb-3">NEWS LETTER</h5>
-                    <form class="d-flex flex-column flex-sm-row gap-2">
-                        <input type="email" class="form-control" placeholder="Enter your Email *" required>
+                    <form action="https://formspree.io/f/mdkgopbv" method="POST" class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" class="form-control" placeholder="Enter your Email *" required name="email">
+                        <input type="hidden" name="_subject" value="Newsletter Subscription">
                         <button type="submit" class="btn btn-dark">SUBSCRIBE</button>
                     </form>
                 </div>
