@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include navbar.html %}
+  
+  <main>
+    {{ content }}
+  </main>
+
+  
+
+  
+  {% if page.url == "/" %}
+    {% include footer-home.html %}
+  {% else %}
+    {% include footer-standard.html %}
+  {% endif %}
+</body>
+</html>

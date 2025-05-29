@@ -1,0 +1,336 @@
+body {
+    background: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.top-header {
+    background: #001489;
+    color: #fff;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.company-name {
+    font-size: 1.1rem; /* 1 unit smaller */
+    font-weight: 600;
+    line-height: 1;
+}
+
+.company-type {
+    font-size: 1.5rem; /* 1 unit larger */
+    font-weight: 700;
+    margin-top: 0; /* Remove extra spacing */
+}
+
+.company-tagline {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #e0e0e0;
+}
+
+.contact-info span {
+    font-size: 1rem;
+}
+
+.nav-bg {
+    background: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #001489 !important;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    border-radius: 0;
+    padding: 8px 18px;
+    transition: background 0.18s, color 0.18s, font-weight 0.18s, transform 0.15s;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    background: #001489 !important;
+    color: #141313 !important;
+    font-weight: bold;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Add styles for dropdown items to match the same navy blue on hover/active */
+.dropdown-menu .dropdown-item {
+    transition: background 0.18s, color 0.18s, font-weight 0.18s, transform 0.15s;
+}
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item.active {
+    background-color: #001489 !important;
+    color: #fff !important;
+    font-weight: bold;
+    transform: translateX(4px) scale(1.03);
+}
+
+.navbar .d-flex.align-items-center.gap-2 a {
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.welcome-card {
+    position: relative;
+}
+
+.welcome-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.welcome-text {
+    bottom: 30px;
+    left: 30px;
+    background: #e57200;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 80%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* --- Motion Effects --- */
+
+/* Card hover effect */
+.card,
+.promo-card,
+.career-card,
+.contact-card {
+    transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1);
+}
+.card:hover,
+.promo-card:hover,
+.career-card:hover,
+.contact-card:hover {
+    transform: translateY(-6px) scale(1.025);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+/* Button hover effect */
+.btn,
+button {
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.15s;
+}
+.btn:hover,
+button:hover,
+.btn:focus,
+button:focus {
+    background: #003399 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(0,20,137,0.10);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Form control focus/hover effect */
+.form-control,
+.form-select {
+    transition: box-shadow 0.18s, border-color 0.18s;
+}
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 2px #00148933;
+    border-color: #001489;
+}
+
+/* Newsletter box hover (promo-offers) */
+.newsletter-box {
+    transition: box-shadow 0.18s, transform 0.18s;
+}
+.newsletter-box:hover {
+    box-shadow: 0 6px 24px rgba(0,20,137,0.10);
+    transform: translateY(-3px) scale(1.015);
+}
+
+/* Card hover effects */
+.bg-white {
+    transition: all 0.3s ease;
+}
+
+/* Newsletter section styles */
+.newsletter-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Button hover animation */
+.newsletter-section .btn {
+    transition: all 0.3s ease;
+}
+
+.newsletter-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover animation */
+.newsletter-section .btn {
+    transition: all 0.3s ease;
+}
+
+.newsletter-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.career-card {
+    background: #f8f9fa;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 48px 32px 32px 32px;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+.career-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #0044ff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.career-desc {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Sorry text animation */
+.sorry-text {
+    font-size: 3.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #b3d233;
+    text-shadow: 2px 2px 0 #666, 4px 4px 0 #fff;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Newsletter box styles */
+.newsletter-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Product card styles */
+.products-section .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 100%;
+}
+
+.products-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.products-section .card-img-top {
+    height: 300px;
+    object-fit: contain;
+    padding: 1.5rem;
+    background: #f8f9fa;
+}
+
+.products-section .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.products-section .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #001489;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-section .card-text {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.products-section .btn {
+    align-self: center;
+    min-width: 200px;
+}
+
+/* Ensure consistent card layout on different screen sizes */
+@media (max-width: 991px) {
+    .products-section .card-img-top {
+        height: 180px;
+    }
+    
+    .products-section .card-title {
+        font-size: 1.1rem;
+        min-height: 2.2rem;
+    }
+}
+
+/* Media queries section */
+@media (max-width: 991px) {
+    .top-header .row {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 10px;
+    }
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar .d-flex.align-items-center.gap-2 {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    /* Center logo and tagline on mobile */
+    .col-lg-4.d-flex.align-items-center {
+        justify-content: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .d-flex.flex-column.align-items-center {
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100%;
+    }
+    .company-tagline {
+        text-align: center !important;
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .top-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 5px;
+    }    .welcome-text {
+        position: static !important;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+}
