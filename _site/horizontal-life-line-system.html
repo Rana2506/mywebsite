@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heinrich Safety Solutions Private Limited (HSSPL)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="icon" href="/assets/images/logo.png" type="image/png">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600;700&display=swap" rel="stylesheet">
+<style>
+    /* Hide caret for Products dropdown */
+    .dropdown-toggle-no-caret::after {
+        display: none !important;
+    }
+</style>
+
+<!-- Top Header -->
+<div class="top-header px-4 py-2">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- Logo and Company Info -->
+            <div class="col-lg-4 d-flex align-items-center mb-2 mb-lg-0">
+                <div class="d-flex flex-column align-items-center">
+                    <a href="index.html">
+                        <img src="/assets/images/logo.png" alt="HSSPL Logo" class="logo mb-1">
+                    </a>
+                    <div class="company-tagline" style="font-size:0.95rem; margin-top:2px; color:orange;">"Your Safety, Our Priority"</div>
+                </div>
+                <div class="ms-3 d-none d-sm-block">
+                    <div class="company-name fw-bold" style="font-size:1.2rem; line-height:1; font-family: 'Raleway', sans-serif;">
+                        Heinrich Safety Solutions
+                    </div>
+                    <div class="company-type" style="font-size:1.3rem; font-weight:bold; font-family: 'Raleway', sans-serif;">
+                        Private Limited (HSSPL)
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Info -->
+            <div class="col-lg-8 d-none d-sm-block">
+                <div class="d-flex flex-wrap justify-content-lg-end gap-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-telephone fs-4"></i>
+                        <div>
+                            <div>+91 8981 840 013</div>
+                            <div>+91 8981 840 014</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-envelope fs-4"></i>
+                        <div>
+                            <div>info@hsspl.in</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-geo-alt fs-4"></i>
+                        <div>Shreebhumi, Laketown, Kolkata, INDIA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</head>
+<body>
+  <!-- Navigation Bar (White BG, Menu Left, Search Bar Right) -->
+<nav class="navbar navbar-expand-lg nav-bg" style="background:#fcfafa !important; border-bottom:1px solid #e0e0e0;">
+    <div class="container-fluid px-4">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <!-- Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                        <li><a class="dropdown-item" href="ppe.html">Personal Protective Equipment</a></li>
+                        <li><a class="dropdown-item" href="life-line-system.html">Life Line System</a></li>
+                        <li><a class="dropdown-item" href="fall-protection-system.html">Fall Protection System</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="promo-offers.html">Promo & Offers</a></li>
+                <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+            </ul>
+            <!-- Search bar -->
+            <form class="d-flex" id="site-search-form" role="search" autocomplete="off">
+                <input class="form-control me-2" id="site-search-input" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit" style="background-color:#001489; color:#fcfafa;">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Search Results Container -->
+<div id="search-results" class="container mt-3" style="display:none;"></div>
+
+<script>
+// Enable dropdown on hover for Products menu
+document.addEventListener('DOMContentLoaded', function () {
+    var dropdown = document.querySelector('.nav-item.dropdown');
+    if (dropdown) {
+        dropdown.addEventListener('mouseenter', function () {
+            var menu = dropdown.querySelector('.dropdown-menu');
+            var toggle = dropdown.querySelector('.dropdown-toggle');
+            menu.classList.add('show');
+            toggle.setAttribute('aria-expanded', 'true');
+        });
+        dropdown.addEventListener('mouseleave', function () {
+            var menu = dropdown.querySelector('.dropdown-menu');
+            var toggle = dropdown.querySelector('.dropdown-toggle');
+            menu.classList.remove('show');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    }
+});</script>
+
+  
+  <main>
+    <!-- Hero Image Section -->
+<br>
+<div class="container-fluid px-0">
+    <div class="overflow-hidden" style="width: 100%;">
+        <img src="/assets/images/horizontal_life_line_system.jpg"
+             alt="Overhead Lifeline System"
+             class="w-100"
+             style="height: 320px; object-fit: contain; background: #fff;">
+    </div>
+</div>
+<br>
+<div class="row justify-content-center mb-4">
+    <div class="col-md-8">
+        <div class=" container-fluid px-0">
+
+            <div class="card-body text-center">
+                <p class="card-text" style="color:#001489; font-weight:500;">Horizontal Lifeline System Overview</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Content: Card Grid View for Components with images -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="mb-4 text-center" style="color:blue;">HORIZONTAL LIFE LINE SYSTEM COMPONENTS</h1>
+        <!-- Custom grid for components -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <!-- Card 1: ANCHOR ATTACHMENT PLATE -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="anchor-attachment-plate.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/anchor_attachment_plate.jpg" alt="ANCHOR ATTACHMENT PLATE" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">ANCHOR ATTACHMENT PLATE</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 2: END ANCHOR -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="end-anchor.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/end_anchor.jpg" alt="END ANCHOR" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">END ANCHOR</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 3: SHOCK ABSORBER SPRING -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="shock-absorber-spring.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/shock_absorber_spring.jpg" alt="SHOCK ABSORBER SPRING" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">SHOCK ABSORBER SPRING</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 4: TENSIONER -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="tensioner.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/tensioner.jpg" alt="TENSIONER" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">TENSIONER</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 5: INTERMEDIATE ANCHOR -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="intermediate-anchor.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/intermediate_anchor.jpg" alt="INTERMEDIATE ANCHOR" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">INTERMEDIATE ANCHOR</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 6: CORNER UNIT -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="corner-unit.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/corner_unit.jpg" alt="CORNER UNIT" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">CORNER UNIT</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 7: WIRE END CONNECTOR -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="wire-end-connector.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/wire_end_connector.jpg" alt="WIRE END CONNECTOR" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">WIRE END CONNECTOR</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 8: EYE CONNECTOR -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="eye-connector.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/eye_connector.jpg" alt="EYE CONNECTOR" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">EYE CONNECTOR</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 9: WIRE ROPE -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="wire-rope.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/wire_rope.jpg" alt="WIRE ROPE" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">WIRE ROPE</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 10: TRAVELER/ GLIDER -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="traveler-or-glider.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/traveler_glider.jpg" alt="TRAVELER/ GLIDER" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">TRAVELER/ GLIDER</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 11: CARABINER HOOK  -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="carabiner-hook.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/carabiner_hook.jpg" alt="CARABINER HOOK" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">CARABINER HOOK</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 12: FASTNERS -->
+            <div class="col d-flex flex-column align-items-center">
+                <a href="fastners.html" style="text-decoration: none; width: 100%; max-width: 320px;">
+                    <div class="card" style="width: 100%; max-width: 320px; min-height: 260px; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; border: 1px solid #fff;">
+                        <img src="/assets/images/fastner_hhs.jpg" alt="FASTNERS" style="height:180px; width:auto; object-fit:contain; display:block; margin:auto;">
+                        <div style="margin-top:12px; text-align:center; color:#fff; font-size:1.08rem; background:#23037a; width:100%; border-radius:4px; padding:4px 0;">FASTNERS</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- New Content Section for Horizontal Lifelines Guide -->
+<section class="py-5" >
+    <div class="container">
+        <p style="color:#001f4d;">"Horizontal Lifelines (HLLs) are crucial for ensuring safety in various work environments, especially where workers are at risk 
+of falling from heights. This guide explores the essentials of Horizontal Lifelines, covering their benefits, compliance standards, 
+and much more, aiming to enhance workplace safety and efficiency."</p>
+        <p style="color:#001f4d;">"A horizontal lifeline is a cable or rail system secured to the building's surface, providing a continuous line of fall protection for 
+individuals, connected by a lanyard or other appropriate means of attachment. These systems are designed to provide rooftop 
+employee safety through continuous fall protection, allowing them to move more expansively and efficiently to perform jobs on 
+the rooftop."</p>
+        <h4 style="color:yellow; background-color: navy;">Choosing the Right Horizontal Lifeline System</h4>
+        <p style="color:#001f4d;">"Some factors when selecting the appropriate system requires evaluating factors such as the work environment, the type of work being performed, and the system's capacity."</p>
+        <ol type="i" style="color:navy;">
+            <li><strong style="color:green;">Work Environment:</strong> The specific conditions and physical layout determine the most suitable type of HLL system. Consider indoor/outdoor use along with factors like wind, rain, and temperature extremes.</li>
+            <li><strong style="color:green;">Type of Work Being Performed:</strong> Tasks requiring great mobility may need a system with longer spans and minimal sag, while confined spaces demand flexibility.</li>
+            <li><strong style="color:green;">System Length and Configuration:</strong> Evaluate the area length and desired configuration (straight, curved, or multiple planes) to determine anchor placement and system strength.</li>
+            <li><strong style="color:green;">Number of Users:</strong> Ensure the system is rated for the number of workers and their combined weight.</li>
+            <li><strong style="color:green;">Fall Clearance:</strong> Calculate fall clearance considering lifeline sag, lanyard length, worker height, and safety factors.</li>
+            <li><strong style="color:green;">Compatibility with PPE:</strong> Verify that the HLL system works seamlessly with personal fall arrest systems and other PPE.</li>
+        </ol>
+    </div>
+</section>
+
+
+  </main>
+
+  
+
+  
+  
+    <footer class="footer pt-3 pb-3 mt-5" style="background-color: #001f4d;">
+    <div class="text-center text-warning">
+        &copy; 2024 Heinrich Safety Solutions Private Limited (HSSPL). All rights reserved.
+    </div>
+</footer>
+
+<!-- Bootstrap JS and Icons -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script src="search.js"></script>
+  
+</body>
+</html>

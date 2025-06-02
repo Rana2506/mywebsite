@@ -129,69 +129,81 @@ document.addEventListener('DOMContentLoaded', function () {
 
   
   <main>
-    <!-- Main Content -->
-<div class="container py-5">
-    <!-- Contact Form Card -->
-    <div class="career-card mb-5">
-        <div class="text-center">
-            <div class="d-inline-block mb-3">
-                <i class="bi bi-headset display-1 text-primary"></i>
-            </div>
-            <div class="career-title mb-2">Contact Us</div>
-            <div class="career-desc mb-4">
-                Have a question or need assistance? We're here to help!<br>
-                Fill out the form below and our team will get back to you promptly.
-            </div>
-        </div>
-        <form action="https://formspree.io/f/xnnprerg" method="POST" target="_blank" class="mt-4">
-                    <div class="mb-3">
-                        <label for="contactName" class="form-label">Full Name *</label>
-                        <input type="text" class="form-control" id="contactName" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="contactEmail" class="form-label">Email *</label>
-                        <input type="email" class="form-control" id="contactEmail" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="contactPhone" class="form-label">Phone *</label>
-                        <input type="tel" class="form-control" id="contactPhone" name="phone" required>
-                    </div>                    <div class="mb-4">
-                        <label for="contactMessage" class="form-label">Message *</label>
-                        <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-dark btn-lg px-5">
-                            <i class="bi bi-send-fill me-2"></i>Send Message
-                        </button>
-                    </div>
-                </form>
+    <!-- Hero Image Section -->
+<br>
+<div class="container-fluid px-0">
+    <div class="overflow-hidden" style="width: 100%;">
+        <img src="/assets/images/fall_protection_system.png"
+             alt="Fall Arrest System"
+             class="w-100"
+             style="height: 320px; object-fit: contain; background: #fff;">
     </div>
-
-    <!-- Contact Information Cards -->
-    <div class="row mt-5 g-4">
-        <div class="col-md-4">
-            <div class="career-card h-100 text-center py-4">
-                <i class="bi bi-geo-alt display-4 text-primary mb-3"></i>
-                <h4 class="career-title h5 mb-3">Address</h4>
-                <p class="career-desc mb-0">Shreebhumi,<br>Laketown, Kolkata,<br>INDIA</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="career-card h-100 text-center py-4">
-                <i class="bi bi-telephone display-4 text-primary mb-3"></i>
-                <h4 class="career-title h5 mb-3">Phone</h4>
-                <p class="career-desc mb-0">+91 0000 000 000<br>+91 0000 000 001</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="career-card h-100 text-center py-4">
-                <i class="bi bi-envelope display-4 text-primary mb-3"></i>
-                <h4 class="career-title h5 mb-3">Email</h4>
-                <p class="career-desc mb-0">info@hsspl.in</p>
+</div>
+<br>
+<div class="row justify-content-center mb-4">
+    <div class="col-md-8">
+        <div class="container-fluid px-0">
+            <div class="card-body text-center">
+                <p class="card-text" style="color:#001489; font-weight:500;">Comprehensive Fall Arrest System Solutions</p>
             </div>
         </div>
     </div>
 </div>
+<!-- Main Content: Card Grid View for Fall Arrest Products -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="mb-4 text-center text-primary fw-semibold">Fall Arrest System Products</h1>
+        <div class="row justify-content-center g-4">
+            <!-- Card 1: Retractable Fall Arrester Block -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow product-card border-primary" style="background: #f8faff; border-width: 2px;">
+                    <img src="/assets/images/retractable_fall_arrester_03.png" class="card-img-top p-0" alt="Retractable Fall Arrester Block" style="width: 100%; height: 180px; object-fit: contain; background: #e3f2fd; border-radius: 0.7rem 0.7rem 0 0;">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title product-title text-primary fw-bold" style="font-size: 1.25rem; letter-spacing: 0.5px;">Retractable Fall Arrester Block</h5>
+                        <p class="card-text product-text" style="font-size: 1.02rem; color: #222;">Automatic locking device that arrests a fall within a short distance, ideal for vertical and horizontal applications.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: Vertical Fall Arrester -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow product-card border-success" style="background: #f8fff8; border-width: 2px;">
+                    <img src="/assets/images/vertical_fall_arrester.jpg" class="card-img-top p-0" alt="Vertical Fall Arrester" style="width: 100%; height: 180px; object-fit: cover; background: #e8f5e9; border-radius: 0.7rem 0.7rem 0 0;">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title product-title text-success fw-bold" style="font-size: 1.25rem; letter-spacing: 0.5px;">Vertical Fall Arrester</h5>
+                        <p class="card-text product-text" style="font-size: 1.02rem; color: #222;">Designed for safe vertical movement, this device follows the user and locks instantly in the event of a fall.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3: Ascender & Descender -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow product-card border-warning" style="background: #fffdf8; border-width: 2px;">
+                    <img src="/assets/images/ascender_descender.png" class="card-img-top p-0" alt="Ascender & Descender" style="width: 100%; height: 180px; object-fit: cover; background: #fffde7; border-radius: 0.7rem 0.7rem 0 0;">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title product-title text-warning fw-bold" style="font-size: 1.25rem; letter-spacing: 0.5px;">Ascender & Descender</h5>
+                        <p class="card-text product-text" style="font-size: 1.02rem; color: #222;">Mechanical device for controlled ascent and descent on ropes, ensuring safety during vertical operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Centered last card -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-4 d-flex align-items-stretch justify-content-center">
+                <div class="card h-100 shadow product-card border-info" style="background: #f8fcff; border-width: 2px;">
+                    <img src="/assets/images/spidermak_kit.png" class="card-img-top p-0" alt="Spidermak Kits" style="width: 100%; height: 180px; object-fit: cover; background: #e3f7ff; border-radius: 0.7rem 0.7rem 0 0;">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title product-title text-info fw-bold" style="font-size: 1.25rem; letter-spacing: 0.5px;">Spidermak Kits</h5>
+                        <p class="card-text product-text" style="font-size: 1.02rem; color: #222;">Complete fall arrest kits for various applications, including harness, connectors, and storage bag for maximum safety.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="w-100 d-flex flex-column align-items-center mt-4">
+    <i class="bi bi-headset" style="font-size: 2.5rem; color: #001489;"></i>
+        <a href="contact-us.html" class="btn btn-success" style="min-width: 180px; font-weight: 600;">Get a Quote</a>
+</div>
+
   </main>
 
   
