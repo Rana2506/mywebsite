@@ -88,7 +88,7 @@
                     <ul class="dropdown-menu" aria-labelledby="productsDropdown">
                         <li><a class="dropdown-item" href="ppe.html">Personal Protective Equipment</a></li>
                         <li><a class="dropdown-item" href="life-line-system.html">Life Line System</a></li>
-                        <li><a class="dropdown-item" href="fall-protection-system.html">Fall Protection System</a></li>
+                        <li><a class="dropdown-item" href="fall-protection-system.html">Fall Arrest System</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
@@ -129,28 +129,64 @@ document.addEventListener('DOMContentLoaded', function () {
 
   
   <main>
-    <div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8 text-center">            <div class="bg-white p-5 rounded shadow promo-card">
-                <div class="sorry-text mb-4">
-                    SORRY!
-                </div>
-                <h2 class="text-danger fw-bold mb-3">NO OFFER AVAILABLE NOW !!</h2>
-                <p class="text-primary mb-5">Kindly stay tuned for upcoming offers...</p>
-                  <div class="newsletter-section mt-4 newsletter-box">
-                    <h4 class="mb-4">NEWS LETTER</h4>
-                    <form action="https://formspree.io/f/mdkgopbv" method="POST" class="d-flex flex-column flex-sm-row justify-content-center gap-2">
-                        <input type="email" class="form-control" style="max-width: 300px; min-width: 180px; flex:1;" placeholder="Enter your Email *" required name="email">
-                        <input type="hidden" name="_subject" value="Newsletter Subscription">
-                        <button type="submit" class="btn btn-dark px-4">
-                            <i class="bi bi-envelope-fill me-2"></i>SUBSCRIBE
-                        </button>
-                    </form>
+    <section class="position-relative d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh; height: auto; overflow: hidden; padding: 0; margin: 0;">
+    <!-- Full-page background image -->
+    <div style="position: absolute; inset: 0; z-index: 0;">
+        <img src="/assets/images/promo-bg.png" alt="Promo Background" style="width: 100vw; height: 100%; min-height: 100vh; object-fit: cover; opacity: 0.18; filter: blur(1.5px); position: absolute; bottom: 0; left: 0;">
+    </div>
+    <div class="container position-relative d-flex flex-column justify-content-center align-items-center" style="z-index: 1; min-height: 100vh; padding-top: 4.5rem; padding-bottom: 2.5rem;">
+        <div class="row justify-content-center w-100 flex-grow-1 align-items-center" style="min-height: 0;">
+            <div class="col-md-8 text-center">
+                <div class="p-5 rounded-4 shadow-lg promo-card" style="background: rgba(255,255,255,0.0); box-shadow: none;">
+                    <div class="sorry-text mb-4" style="font-size: 2.5rem; color: #b3d233; font-family: 'Merriweather Sans', cursive; font-weight: 700; letter-spacing: 2px;">SORRY!</div>
+                    <h2 class="text-danger fw-bold mb-3" style="font-size: 2rem; letter-spacing: 1px;">NO OFFER AVAILABLE NOW !!</h2>
+                    <p class="text-primary mb-5" style="font-size: 1.1rem;">Kindly stay tuned for upcoming offers...</p>
+                    <div class="newsletter-section mt-4 newsletter-box">
+                        <h4 class="mb-4" style="font-weight: 700; letter-spacing: 1px; color: #222;">NEWS LETTER</h4>
+                        <form action="https://formspree.io/f/mdkgopbv" method="POST" class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+                            <input type="email" class="form-control" style="max-width: 300px; min-width: 180px; flex:1; background: rgba(255,255,255,0.7); border: 1.5px solid #b3d233;" placeholder="Enter your Email *" required name="email">
+                            <input type="hidden" name="_subject" value="Newsletter Subscription">
+                            <button type="submit" class="btn btn-dark px-4" style="font-weight: 600; letter-spacing: 1px;">
+                                <i class="bi bi-envelope-fill me-2"></i>SUBSCRIBE
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<style>
+footer, .footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  min-height: unset;
+  background: #00245c !important;
+  color: #ffd700 !important;
+  text-align: center;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  box-shadow: none;
+}
+footer .container, .footer .container {
+  padding: 0;
+  margin: 0 auto;
+}
+footer p, .footer p {
+  margin: 0;
+  padding: 0.75rem 0 0.5rem 0;
+  color: #ffd700 !important;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+}
+</style>
   </main>
 
   

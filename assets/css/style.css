@@ -553,3 +553,107 @@ button:focus {
     padding: 0.8rem 0.7rem 1rem 0.7rem;
   }
 }
+
+/* --- Vertical Life Line System Page Styles --- */
+.modern-card-link {
+  text-decoration: none;
+  width: 100%;
+  max-width: 340px;
+  display: block;
+}
+.modern-card {
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 1.1rem;
+  padding: 14px 10px 10px 10px;
+  margin-bottom: 10px;
+  border: 1.5px solid #e3f0ff;
+  box-shadow: 0 2px 8px 0 rgba(25,118,210,0.06);
+  transition: box-shadow 0.18s, transform 0.18s;
+  position: relative;
+}
+.modern-card-link:hover .modern-card {
+  transform: translateY(-8px) scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px 0 rgba(25,118,210,0.18), 0 2px 8px 0 rgba(25,118,210,0.08);
+}
+.modern-card-img, .horizontal-modern-card-img {
+  height: 170px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  border-radius: 0.7rem;
+  background: #f4f8fd;
+  box-shadow: 0 2px 8px 0 rgba(25,118,210,0.04);
+}
+.modern-card-title {
+  margin-top: 14px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.13rem;
+  background: #1976d2;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 6px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px 0 rgba(25,118,210,0.07);
+}
+section + section {
+  margin-top: 0 !important;
+}
+.component-section-no-radius {
+  border-radius: 0 0 0 0 !important;
+}
+.guide-section-no-radius {
+  border-radius: 0 0 1.2rem 1.2rem !important;
+}
+.special-features-intro-box {
+  background: linear-gradient(90deg, #e3f0ff 60%, #f8faff 100%);
+  border-radius: 1.1rem;
+  box-shadow: 0 4px 18px 0 rgba(25,118,210,0.10);
+  border: 1.5px solid #b6d0f7;
+  padding: 1.3rem 1.2rem 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.feature-card-modern {
+  box-shadow: 0 4px 18px 0 rgba(25,118,210,0.10) !important;
+  border: 1.5px solid #e3f0ff !important;
+  background: #fff !important;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.feature-card-modern:hover {
+  box-shadow: 0 8px 32px 0 rgba(25,118,210,0.18), 0 2px 8px 0 rgba(25,118,210,0.08) !important;
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* Fix for row-cols-md-3 grid gap and card alignment */
+.row-cols-md-3 > .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fix for card grid spacing and responsiveness */
+@media (max-width: 991.98px) {
+  .modern-card, .feature-box {
+    min-height: 0;
+    padding: 12px 6px 8px 6px;
+  }
+}
+
+/* Fix for card title font and spacing */
+.modern-card-title, .feature-box .fw-bold {
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
