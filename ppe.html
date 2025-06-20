@@ -4,103 +4,807 @@ title: Personal Protective Equipment | HSSPL
 permalink: /ppe.html
 ---
 
-<section class="py-5 bg-light">
-  <div class="container">
-    <h1 class="mb-4 text-center text-primary fw-semibold">Personal Protective Equipment (PPE)</h1>
-    <p class="lead text-center mb-5">
-      Our range of Personal Protective Equipment (PPE) ensures safety and compliance for workers in all environments. Explore our essential PPE products below.
+<!-- Hero Section with Breadcrumb -->
+<section class="hero-section position-relative d-flex align-items-center justify-content-center text-white" style="
+  height: 60vh; 
+  background: linear-gradient(rgba(1, 22, 206, 0.219), rgba(0, 0, 0, 0.322)), 
+              url('{{ site.baseurl }}/assets/images/ppe_hero.png') center/cover;
+  background-attachment: fixed;
+">
+  <div class="container text-center">
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb justify-content-center bg-transparent p-0 mb-0">
+        <li class="breadcrumb-item">
+          <a href="{{ site.baseurl }}/" class="text-white text-decoration-none opacity-75 hover-opacity-100">
+            <i class="fas fa-home me-1"></i>Home
+          </a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="{{ site.baseurl }}/products.html" class="text-white text-decoration-none opacity-75 hover-opacity-100">
+            Products
+          </a>
+        </li>
+        <li class="breadcrumb-item active text-white" aria-current="page">
+          Personal Protective Equipment
+        </li>
+      </ol>
+    </nav>
+    
+    <!-- Hero Header -->
+    <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInUp">
+      Personal Protective Equipment
+    </h1>
+    
+    <!-- Hero Subheading -->
+    <p class="lead fs-4 mb-4 opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
+      Premium safety gear and protective equipment to ensure worker safety and regulatory compliance across all industries
     </p>
-    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-      <!-- Reflective Jacket -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-container" style="height: 200px; overflow: hidden;">
-            <img src="{{ site.baseurl }}/assets/images/reflective-jacket.jpg" class="card-img-top" alt="Reflective Jacket" style="height: 100%; width: 100%; object-fit: contain; padding: 1rem; background: #f8f9fa;">
+    
+    <!-- Call to Action -->
+    <div class="animate__animated animate__fadeInUp animate__delay-2s">
+      <a href="#ppe-products" class="btn btn-light btn-lg px-4 py-3 me-3 shadow-lg">
+        <i class="fas fa-shield-alt me-2"></i>View Products
+      </a>
+      <a href="{{ site.baseurl }}/contact-us.html" class="btn btn-outline-light btn-lg px-4 py-3 shadow-lg">
+        <i class="fas fa-phone me-2"></i>Get Quote
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Custom Styles for Hero Section -->
+<style>
+.hero-section {
+  background-attachment: fixed;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: rgba(255, 255, 255, 0.7);
+}
+.hover-opacity-100:hover {
+  opacity: 1 !important;
+}
+
+/* Modern PPE Card Styles */
+.ppe-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  height: 100%;
+}
+
+.ppe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(227, 6, 19, 0.15);
+}
+
+.ppe-card-img-container {
+  position: relative;
+  height: 240px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  overflow: hidden;
+  border-bottom: 2px solid #f1f3f4;
+}
+
+.ppe-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  
+  transition: transform 0.3s ease;
+}
+
+.ppe-card:hover .ppe-card-img {
+  transform: scale(1.05);
+}
+
+.ppe-card-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(227, 6, 19, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.ppe-card:hover .ppe-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ppe-card-body {
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ppe-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  min-height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ppe-card-description {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.ppe-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.ppe-card-features li {
+  font-size: 0.8rem;
+  color: #495057;
+  padding: 0.25rem 0;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.ppe-card-features li:before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.ppe-card-footer {
+  padding: 0;
+  background: none;
+  border: none;
+  margin-top: auto;
+}
+
+.ppe-card-btn {
+  background: linear-gradient(135deg, #e30613 0%, #c50410 100%);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ppe-card-btn:hover {
+  background: linear-gradient(135deg, #c50410 0%, #a0030e 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(227, 6, 19, 0.3);
+}
+
+.ppe-card-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.ppe-card-btn:hover:before {
+  left: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+    background-attachment: scroll;
+    /* Stronger overlay for mobile */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), 
+                url('{{ site.baseurl }}/assets/images/ppe_hero.png') center/cover !important;
+  }
+  
+  /* Add semi-transparent background behind text content */
+  .hero-section .container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 2rem 1rem;
+    backdrop-filter: blur(2px);
+  }
+  
+  /* Make hero text more visible on mobile */
+  .display-3 {
+    font-size: 2.2rem; /* Slightly larger for better visibility */
+    color: #ffffff !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1), 0 0 15px rgba(0, 0, 0, 0.8);
+    font-weight: 900 !important;
+  }
+  .hero-section .lead.fs-4 {
+    font-size: 1.2rem !important; /* Slightly larger subheading */
+    color: #ffffff !important;
+    opacity: 1 !important; /* Remove opacity for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1), 0 0 12px rgba(0, 0, 0, 0.8);
+    font-weight: 600 !important;
+  }
+  .hero-section .btn-lg {
+    font-size: 0.95rem; /* Slightly larger button text */
+    padding: 0.8rem 1.6rem; /* Adjust button padding */
+  }
+  /* Make breadcrumb more visible */
+  .hero-section .breadcrumb-item a,
+  .hero-section .breadcrumb-item.active {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-weight: 600;
+  }
+  /* Add top padding for breadcrumb navigation on mobile */
+  .hero-section nav[aria-label="breadcrumb"] {
+    padding-top: 0.5rem;
+  }
+  /* Keep desktop card dimensions on mobile to prevent image stretching */
+  .ppe-card-img-container {
+    height: 240px; /* Same as desktop */
+  }
+  .ppe-card-body {
+    padding: 1.5rem; /* Same as desktop */
+  }
+  /* Ensure cards maintain proper proportions */
+  .ppe-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  /* Optional: Center cards on very small screens */
+  .row.g-4 {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Stronger background for very small screens */
+  .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), 
+                url('{{ site.baseurl }}/assets/images/ppe_hero.png') center/cover !important;
+  }
+  
+  /* Even stronger background behind text */
+  .hero-section .container {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Make text more visible on very small screens */
+  .display-3 {
+    font-size: 1.9rem !important; /* Larger than before for better visibility */
+    color: #ffffff !important;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.9);
+    font-weight: 900 !important;
+  }
+  .hero-section .lead.fs-4 {
+    font-size: 1.1rem !important; /* Larger subheading */
+    color: #ffffff !important;
+    opacity: 1 !important; /* Remove opacity for better visibility */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1), 0 0 15px rgba(0, 0, 0, 0.8);
+    font-weight: 700 !important;
+  }
+  .hero-section .btn-lg {
+    font-size: 0.9rem; /* Slightly larger button text */
+    padding: 0.7rem 1.4rem; /* Better button padding */
+  }
+  /* Make breadcrumb more visible on small screens */
+  .hero-section .breadcrumb-item a,
+  .hero-section .breadcrumb-item.active {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    font-weight: 500;
+  }
+  /* On very small screens, you can optionally make cards full width */
+  .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .ppe-card {
+    max-width: 350px; /* Limit max width to prevent cards from becoming too wide */
+    margin: 0 auto;
+  }
+}
+
+/* Center last card when it's alone in the row */
+@media (min-width: 992px) {
+    /* On large screens (4 cards per row) - center the 5th card */
+    .row .col-lg-3:nth-child(4n+1):nth-last-child(1) {
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* On medium screens (3 cards per row) - center orphaned cards */
+    .row .col-md-4:nth-child(3n+1):nth-last-child(1),
+    .row .col-md-4:nth-child(3n+2):nth-last-child(1) {
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+@media (max-width: 767px) {
+    /* On small screens (2 cards per row) - center orphaned card */
+    .row .col-sm-6:nth-child(2n+1):nth-last-child(1) {
+        margin: 0 auto;
+        float: none;
+    }
+}
+</style>
+
+<section id="ppe-products" class="py-5 bg-light">  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="mb-3 text-primary fw-semibold">Our PPE Product Range</h2>
+      <p class="lead text-muted">
+        Comprehensive safety solutions designed to protect workers in various industrial environments
+      </p>
+    </div>
+    <div class="row g-4">      <!-- Reflective Jacket -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/reflective_jacket.png" class="ppe-card-img" alt="Reflective Jacket">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
           </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Reflective Jacket</h5>
-            <p class="card-text">High-visibility safety jacket with reflective strips</p>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Reflective Jacket</h5>
+            <p class="ppe-card-description">High-visibility safety jacket with reflective strips for enhanced visibility in low-light conditions</p>
+            <ul class="ppe-card-features">
+              <li>ANSI/ISEA 107 compliant</li>
+              <li>Machine washable</li>
+              <li>Breathable fabric</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      
+      </div>      
       <!-- Reflective Strap -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-container" style="height: 200px; overflow: hidden;">
-            <img src="{{ site.baseurl }}/assets/images/reflective-strap.jpg" class="card-img-top" alt="Reflective Strap" style="height: 100%; width: 100%; object-fit: contain; padding: 1rem; background: #f8f9fa;">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/reflective-strap.png" class="ppe-card-img" alt="Reflective Strap">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
           </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Reflective Strap</h5>
-            <p class="card-text">High-visibility safety straps for enhanced visibility</p>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Reflective Strap</h5>
+            <p class="ppe-card-description">High-visibility safety straps for enhanced visibility and improved safety protocols</p>
+            <ul class="ppe-card-features">
+              <li>Adjustable fit</li>
+              <li>Durable construction</li>
+              <li>Multiple color options</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Safety Glass -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-container" style="height: 200px; overflow: hidden;">
-            <img src="{{ site.baseurl }}/assets/images/safety-glass.jpg" class="card-img-top" alt="Safety Glass" style="height: 100%; width: 100%; object-fit: contain; padding: 1rem; background: #f8f9fa;">
+      <!-- face Sheild -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/face_sheild.png" class="ppe-card-img" alt="Safety Glass">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
           </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Safety Glass</h5>
-            <p class="card-text">Impact-resistant protective eyewear</p>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Face sheild </h5>
+            <p class="ppe-card-description">Impact-resistant protective Face sheild designed for industrial work environments</p>
+            <ul class="ppe-card-features">
+              <li>Anti-fog coating</li>
+              <li>UV protection</li>
+              <li>Scratch resistant</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rubber Safety Gloves -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/safety_gloves_rubber.png" class="ppe-card-img" alt="Safety Gloves (Rubber)">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Safety Gloves (Rubber)</h5>
+            <p class="ppe-card-description">Heavy-duty rubber gloves providing excellent hand protection against chemicals and cuts</p>
+            <ul class="ppe-card-features">
+              <li>Chemical resistant</li>
+              <li>Non-slip grip</li>
+              <li>Multiple sizes</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Safety Mask -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-container" style="height: 200px; overflow: hidden;">
-            <img src="{{ site.baseurl }}/assets/images/safety-mask.jpg" class="card-img-top" alt="Safety Mask" style="height: 100%; width: 100%; object-fit: contain; padding: 1rem; background: #f8f9fa;">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/face_musk.png" class="ppe-card-img" alt="Safety Mask">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
           </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Safety Mask</h5>
-            <p class="card-text">Respiratory protection for hazardous environments</p>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Safety Mask</h5>
+            <p class="ppe-card-description">Professional respiratory protection for hazardous environments and dust particles</p>
+            <ul class="ppe-card-features">
+              <li>N95 filtration</li>
+              <li>Comfortable fit</li>
+              <li>Disposable/reusable</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Safety Gloves -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-container" style="height: 200px; overflow: hidden;">
-            <img src="{{ site.baseurl }}/assets/images/safety-gloves.jpg" class="card-img-top" alt="Safety Gloves" style="height: 100%; width: 100%; object-fit: contain; padding: 1rem; background: #f8f9fa;">
+      <!-- Leather Safety Gloves -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/safety_gloves_leather.png" class="ppe-card-img" alt="Safety Gloves Leather">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
           </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Safety Gloves</h5>
-            <p class="card-text">Heavy-duty hand protection</p>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Safety Gloves (Leather)</h5>
+            <p class="ppe-card-description">Premium leather gloves offering superior protection and comfort for heavy-duty work</p>
+            <ul class="ppe-card-features">
+              <li>Genuine leather</li>
+              <li>Reinforced palm</li>
+              <li>Cut resistant</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Safety Helmet  -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-container" style="height: 200px; overflow: hidden;">
-            <img src="{{ site.baseurl }}/assets/images/safety_helmet.png" class="card-img-top" alt="Safety Helmet White" style="height: 100%; width: 100%; object-fit: contain; padding: 1rem; background: #f8f9fa;">
+      <!-- Safety Glass -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/safety_eye_glass.png" class="ppe-card-img" alt="Safety Glass">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
           </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Safety Helmet</h5>
-            <p class="card-text">High-impact protection helmet </p>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Safety Eye Glass</h5>
+            <p class="ppe-card-description">Premium quality eyewear offering superior protection and comfort for heavy-duty work</p>
+            <ul class="ppe-card-features">
+              <li>Premium quality</li>
+              <li>Uv Protection </li>
+              <li>Scratch Proof</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety Helmet -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/safety_helmet.png" class="ppe-card-img" alt="Safety Helmet White">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Safety Helmet</h5>
+            <p class="ppe-card-description">High-impact protection helmet designed to safeguard against falling objects and impacts</p>
+            <ul class="ppe-card-features">
+              <li>ANSI Z89.1 certified</li>
+              <li>Adjustable suspension</li>
+              <li>Lightweight design</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Safety Shoes -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-container" style="height: 200px; overflow: hidden;">
-            <img src="{{ site.baseurl }}/assets/images/safety-shoes.jpg" class="card-img-top" alt="Safety Shoes" style="height: 100%; width: 100%; object-fit: contain; padding: 1rem; background: #f8f9fa;">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/safety_shoes.png" class="ppe-card-img" alt="Safety Shoes">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
           </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Safety Shoes</h5>
-            <p class="card-text">Steel-toed protective footwear</p>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Safety Shoes</h5>
+            <p class="ppe-card-description">Steel-toed protective footwear providing comprehensive foot protection in industrial settings</p>
+            <ul class="ppe-card-features">
+              <li>Steel toe cap</li>
+              <li>Slip resistant sole</li>
+              <li>Electrical hazard rated</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
           </div>
         </div>
       </div>
+    
+      <!-- Eyewash Bottle (500 ml) -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/eyewash_bottle.png" class="ppe-card-img" alt="Eyewash Bottle (500 ml)">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Eyewash Bottle (500ml)</h5>
+            <p class="ppe-card-description">Emergency eyewash solution in convenient plastic bottle for immediate eye irrigation</p>
+            <ul class="ppe-card-features">
+              <li>500ml capacity</li>
+              <li>Sterile solution</li>
+              <li>Easy squeeze bottle</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>      <!-- Eyewash Bottle (1 ltr.) -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/eyewash_bottle.png" class="ppe-card-img" alt="Eyewash Bottle (1 ltr)">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Eyewash Bottle (1 Liter)</h5>
+            <p class="ppe-card-description">Large capacity emergency eyewash solution for extended irrigation and workplace safety</p>
+            <ul class="ppe-card-features">
+              <li>1000ml capacity</li>
+              <li>Sterile solution</li>
+              <li>Extended use design</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Waist Tools cum PPE Bag -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/waist_tools_cum_ppe_bag.png" class="ppe-card-img" alt="Waist tools cum PPE bag">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Waist Tools cum PPE Bag</h5>
+            <p class="ppe-card-description">Multi-purpose waist bag designed to carry tools and personal protective equipment safely</p>
+            <ul class="ppe-card-features">
+              <li>Multiple compartments</li>
+              <li>Adjustable waist strap</li>
+              <li>Durable material</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bump Cap -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/bump_cap.png" class="ppe-card-img" alt="Bump Cap">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Bump Cap</h5>
+            <p class="ppe-card-description">Lightweight head protection for low-impact hazards and bump protection in confined spaces</p>
+            <ul class="ppe-card-features">
+              <li>Lightweight design</li>
+              <li>Comfortable fit</li>
+              <li>Ventilation holes</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Davit Arm System -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/davit_arm_system.png" class="ppe-card-img" alt="Davit Arm System">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Davit Arm System</h5>
+            <p class="ppe-card-description">Professional lifting and rescue system designed for confined space entry and emergency situations</p>
+            <ul class="ppe-card-features">
+              <li>Heavy-duty construction</li>
+              <li>360° rotation</li>
+              <li>Easy installation</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Painting Kit -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/painting_kit.png" class="ppe-card-img" alt="Painting Kit">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Painting Kit</h5>
+            <p class="ppe-card-description">Complete safety kit for painting operations including respiratory and skin protection equipment</p>
+            <ul class="ppe-card-features">
+              <li>Complete protection kit</li>
+              <li>Respirator included</li>
+              <li>Chemical resistant</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parapet Wall Anchor -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/parapet_wall_anchor.png" class="ppe-card-img" alt="Parapet Wall Anchor">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Parapet Wall Anchor</h5>
+            <p class="ppe-card-description">Specialized anchor system designed for secure attachment to parapet walls and roof edges</p>
+            <ul class="ppe-card-features">
+              <li>High strength steel</li>
+              <li>Weather resistant</li>
+              <li>Easy installation</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tripod -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card ppe-card">
+          <div class="ppe-card-img-container">
+            <img src="{{ site.baseurl }}/assets/images/tripod.png" class="ppe-card-img" alt="Tripod">
+            <div class="ppe-card-overlay">
+              <i class="fas fa-shield-alt me-1"></i>PPE
+            </div>
+          </div>
+          <div class="card-body ppe-card-body">
+            <h5 class="ppe-card-title">Tripod</h5>
+            <p class="ppe-card-description">Stable three-point support system for lifting equipment and confined space rescue operations</p>
+            <ul class="ppe-card-features">
+              <li>Adjustable height</li>
+              <li>Portable design</li>
+              <li>Load tested</li>
+            </ul>
+            <div class="ppe-card-footer">
+              <button class="btn ppe-card-btn">
+                <i class="fas fa-phone me-2"></i>Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </section>

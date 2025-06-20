@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Block access to admin and sensitive areas
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_data/
+Disallow: /_backup/
+Disallow: /templates/
+
+# Allow access to assets
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl delay (optional - be careful with this)
+Crawl-delay: 1

@@ -1,0 +1,46 @@
+products:
+  ppe:
+    title: "Personal Protective Equipment (PPE) - Safety Gear"
+    description: "Comprehensive range of personal protective equipment including safety helmets, gloves, shoes, masks, and reflective jackets for construction and industrial safety."
+    keywords: "PPE, personal protective equipment, safety helmet, safety gloves, safety shoes, face shield, reflective jacket, safety mask"
+    
+  lifeline_system:
+    title: "Lifeline Systems - Horizontal, Vertical & Overhead Safety Lines"
+    description: "Professional lifeline systems for fall protection including horizontal, vertical, and overhead configurations for construction and industrial applications."
+    keywords: "lifeline system, horizontal lifeline, vertical lifeline, overhead lifeline, fall protection, safety line"
+    
+  fall_arrest:
+    title: "Fall Arrest Systems - Retractable & Vertical Fall Arresters"
+    description: "Advanced fall arrest systems including retractable fall arresters and vertical fall arresters for comprehensive fall protection solutions."
+    keywords: "fall arrest system, retractable fall arrester, vertical fall arrester, fall protection equipment"
+    
+  guardrail:
+    title: "Rooftop Guardrail Systems - Permanent Safety Solutions"
+    description: "Durable rooftop guardrail systems providing permanent fall protection for building edges and elevated work areas."
+    keywords: "rooftop guardrail, roof safety, permanent guardrail, edge protection, building safety"
+    
+  skylight:
+    title: "Skylight Protection Covers - Roof Opening Safety"
+    description: "Protective covers for skylights and roof openings to prevent falls and ensure worker safety during rooftop operations."
+    keywords: "skylight protection, roof opening safety, skylight covers, fall prevention"
+
+components:
+  anchor_plate:
+    title: "Anchor Plates - Top, Bottom & Vertical Mounting Solutions"
+    description: "High-quality anchor plates for secure mounting of lifeline systems including top anchor plates, bottom anchor plates, and vertical configurations."
+    keywords: "anchor plate, top anchor plate, bottom anchor plate, vertical anchor plate, lifeline mounting"
+    
+  wire_rope:
+    title: "Wire Rope - Galvanized Steel Safety Cables"
+    description: "Premium galvanized steel wire rope for lifeline systems, offering superior strength and corrosion resistance for long-lasting safety installations."
+    keywords: "wire rope, steel cable, galvanized wire rope, safety cable, lifeline cable"
+    
+  carabiner:
+    title: "Carabiner Hooks - Safety Connecting Hardware"
+    description: "Professional-grade carabiner hooks and safety connectors for secure attachment in fall protection and lifeline systems."
+    keywords: "carabiner hook, safety hook, carabiner connector, climbing hardware"
+    
+  shock_absorber:
+    title: "Shock Absorbers - Spring & Suspension Systems"
+    description: "Energy-absorbing devices including spring and suspension shock absorbers to reduce impact forces in fall arrest systems."
+    keywords: "shock absorber, spring shock absorber, suspension shock absorber, energy absorber"

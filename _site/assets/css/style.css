@@ -1,104 +1,3 @@
-body {
-    background: #fff;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.top-header {
-    background: #001489;
-    color: #fff;
-}
-
-.logo {
-    max-height: 60px;
-    object-fit: contain;
-
-}
-
-.company-name {
-    font-size: 1.1rem; /* 1 unit smaller */
-    font-weight: 600;
-    line-height: 1;
-}
-
-.company-type {
-    font-size: 1.5rem; /* 1 unit larger */
-    font-weight: 700;
-    margin-top: 0; /* Remove extra spacing */
-}
-
-.company-tagline {
-    font-size: 0.95rem;
-    font-style: bold;
-    color: #e0e0e0
-}
-
-.contact-info span {
-    font-size: 1rem;
-}
-
-.nav-bg {
-    background: #fff !important;
-}
-
-.navbar-nav .nav-link {
-    color: #001489 !important;
-    font-size: 1.1rem;
-    margin-right: 10px;
-    border-radius: 0;
-    padding: 8px 18px;
-    transition: background 0.18s, color 0.18s, font-weight 0.18s, transform 0.15s;
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:focus,
-.navbar-nav .nav-link:hover {
-    background: #001489 !important;
-    color: #141313 !important;
-    font-weight: bold;
-    transform: translateY(-2px) scale(1.04);
-}
-
-/* Add styles for dropdown items to match the same navy blue on hover/active */
-.dropdown-menu .dropdown-item {
-    transition: background 0.18s, color 0.18s, font-weight 0.18s, transform 0.15s;
-}
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus,
-.dropdown-menu .dropdown-item.active {
-    background-color: #001489 !important;
-    color: #fff !important;
-    font-weight: bold;
-    transform: translateX(4px) scale(1.03);
-}
-
-.navbar .d-flex.align-items-center.gap-2 a {
-    margin-left: 2px;
-    margin-right: 2px;
-    font-size: 1.2rem;
-    display: inline-block;
-}
-
-.welcome-card {
-    position: relative;
-}
-
-.welcome-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-.welcome-text {
-    bottom: 30px;
-    left: 30px;
-    background: #e57200;
-    color: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    max-width: 80%;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-
 /* --- Motion Effects --- */
 
 /* Card hover effect */
@@ -229,48 +128,7 @@ button:focus {
 }
 
 /* Product card styles */
-.products-section .card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    height: 100%;
-}
 
-.products-section .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.products-section .card-img-top {
-    height: 300px;
-    object-fit: contain;
-    padding: 1.5rem;
-    background: #f8f9fa;
-}
-
-.products-section .card-body {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-}
-
-.products-section .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #001489;
-    min-height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.products-section .card-text {
-    flex-grow: 1;
-    margin-bottom: 1.5rem;
-}
-
-.products-section .btn {
-    align-self: center;
-    min-width: 200px;
-}
 
 /* Ensure consistent card layout on different screen sizes */
 @media (max-width: 991px) {
@@ -332,7 +190,7 @@ button:focus {
     }
 }
 
-/* --- Life Line System Compact Card Styles --- */
+/* --- Life Line System Compact Card Styles -- */
 .lifeline-card {
   display: flex;
   align-items: stretch;
@@ -631,10 +489,6 @@ section + section {
   background: #fff !important;
   transition: box-shadow 0.18s, transform 0.18s;
 }
-.feature-card-modern:hover {
-  box-shadow: 0 8px 32px 0 rgba(25,118,210,0.18), 0 2px 8px 0 rgba(25,118,210,0.08) !important;
-  transform: translateY(-4px) scale(1.03);
-}
 
 /* Fix for row-cols-md-3 grid gap and card alignment */
 .row-cols-md-3 > .col {
@@ -656,4 +510,668 @@ section + section {
   font-family: inherit;
   font-weight: 700;
   letter-spacing: 0.5px;
+}
+
+/* --- Hero Section Styles for Lifeline Pages --- */
+.main-content-section {
+    padding-top: 120px !important;
+}
+
+@media (max-width: 768px) {
+    .main-content-section {
+        padding-top: 100px !important;
+    }
+}
+
+.hero-section {
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    padding-top: 140px !important;
+    padding-bottom: 80px !important;
+    color: white !important;
+    min-height: 60vh !important;
+}
+
+.breadcrumb-custom {
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 8px 20px !important;
+    justify-content: center !important;
+}
+
+.breadcrumb-custom a {
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: color 0.3s !important;
+}
+
+.breadcrumb-custom a:hover {
+    color: #ffd700 !important;
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
+    color: #ffd700 !important;
+}
+
+.breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
+    color: #fff !important;
+}
+
+/* Hero section background images for different pages */
+.hero-horizontal {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://st2.depositphotos.com/1177973/46181/i/450/depositphotos_461815460-stock-photo-construction-workers-wearing-safety-harness.jpg') !important;
+}
+
+.hero-vertical {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://st4.depositphotos.com/12985790/25011/i/450/depositphotos_250114950-stock-photo-industrial-climber-wearing-safety-harness.jpg') !important;
+}
+
+.hero-overhead {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://st.depositphotos.com/1005844/2117/i/450/depositphotos_21172299-stock-photo-construction-site-workers.jpg') !important;
+}
+
+.hero-custom {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://st3.depositphotos.com/1037987/17892/i/450/depositphotos_178925102-stock-photo-engineers-construction-site.jpg') !important;
+}
+
+/* --- Component Detail Page Styles --- */
+
+/* Component Hero Section */
+.component-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://st2.depositphotos.com/1177973/46181/i/450/depositphotos_461815460-stock-photo-construction-workers-wearing-safety-harness.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    padding-top: 120px !important;
+    padding-bottom: 60px !important;
+    color: white !important;
+    min-height: 50vh !important;
+    position: relative !important;
+}
+
+.component-hero-section .breadcrumb.breadcrumb-custom {
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 8px 20px !important;
+    justify-content: center !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.component-hero-section .breadcrumb.breadcrumb-custom a {
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: color 0.3s !important;
+}
+
+.component-hero-section .breadcrumb.breadcrumb-custom a:hover {
+    color: #ffd700 !important;
+}
+
+.component-hero-section .breadcrumb.breadcrumb-custom .breadcrumb-item.active {
+    color: #ffd700 !important;
+}
+
+.component-hero-section .breadcrumb.breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
+    color: #fff !important;
+}
+
+/* Component Detail Page - New Structure */
+
+/* Image Stack */
+.component-images-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.component-image-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.15);
+}
+
+.component-detail-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.component-image-container:hover .component-detail-image {
+    transform: scale(1.05);
+}
+
+.component-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.component-image-container:hover .component-overlay {
+    transform: translateY(0);
+}
+
+.overlay-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+}
+
+.overlay-text {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.overlay-specs {
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.overlay-specs div {
+    margin-bottom: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.overlay-specs div:last-child {
+    border-bottom: none;
+}
+
+/* Right Panel */
+.component-info-panel {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.1);
+    height: fit-content;
+}
+
+.component-main-title {
+    color: #1976d2;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.component-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Specifications Table */
+.specs-table {
+    background: #f8faff;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    border: 1px solid #e3f0ff;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e3f0ff;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-weight: 600;
+    color: #1976d2;
+    font-size: 0.95rem;
+}
+
+.spec-value {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* Vertical Features */
+.vertical-features {
+    margin-top: 2rem;
+}
+
+.features-header {
+    color: #1976d2;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.feature-list-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-item-vertical {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8faff;
+    border-radius: 0.5rem;
+    border-left: 3px solid #1976d2;
+    transition: all 0.2s ease;
+}
+
+.feature-item-vertical:hover {
+    background: #e3f0ff;
+    transform: translateX(5px);
+}
+
+.feature-icon-vertical {
+    width: 35px;
+    height: 35px;
+    background: #1976d2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.feature-text-vertical h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1976d2;
+}
+
+.feature-text-vertical small {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .component-images-stack {
+        margin-bottom: 2rem;
+    }
+    
+    .component-detail-image {
+        height: 200px;
+    }
+    
+    .component-main-title {
+        font-size: 1.7rem;
+    }
+    
+    .component-info-panel {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .component-hero-section {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+        min-height: 40vh !important;
+    }
+    
+    .component-detail_image {
+        height: 180px;
+    }
+    
+    .component-main-title {
+        font-size: 1.5rem;
+    }
+    
+    .spec-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .feature-item-vertical {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+/* Responsive Styles for Component Pages */
+@media (max-width: 991.98px) {
+    .component-images-container {
+        position: static;
+        margin-bottom: 2rem;
+    }
+    
+    .component-image {
+        height: 250px;
+    }
+    
+    .component-title {
+        font-size: 1.8rem;
+    }
+    
+    .features-title {
+        font-size: 1.5rem;
+    }
+    
+    .component-details-section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .component-hero-section {
+        padding-top: 120px !important;
+        padding-bottom: 60px !important;
+        min-height: 40vh !important;
+    }
+    
+    .component-content {
+        padding: 1.5rem;
+    }
+    
+    .component-image {
+        height: 200px;
+    }
+    
+    .component-title {
+        font-size: 1.6rem;
+    }
+    
+    .spec-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    
+    .feature-icon {
+        align-self: center;
+    }
+}
+
+/* Additional Component Page Fixes */
+.component-details-section .container {
+    max-width: 1200px;
+}
+
+.component-details-section .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.component-details-section .col-lg-6 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure proper spacing between sections */
+section.component-hero-section + section.component-details-section {
+    margin-top: 0 !important;
+}
+
+/* Fix any Bootstrap conflicts */
+.component-image-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.component-image-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+/* Ensure content is visible and properly spaced */
+.component-content {
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix for mobile responsiveness */
+
+/* Component Page Override Styles - High Priority */
+
+.anchor-attachment-page .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.anchor-attachment-page .component-images-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+}
+
+.anchor-attachment-page .component-image-container {
+    position: relative !important;
+    border-radius: 1rem !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.15) !important;
+    background: #fff !important;
+}
+
+.anchor-attachment-page .component-detail-image {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.3s ease !important;
+}
+
+.anchor-attachment-page .component-image-container:hover .component-detail-image {
+    transform: scale(1.05) !important;
+}
+
+.anchor-attachment-page .component-overlay {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9)) !important;
+    color: white !important;
+    padding: 1.5rem !important;
+    transform: translateY(100%) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.anchor-attachment-page .component-image-container:hover .component-overlay {
+    transform: translateY(0) !important;
+}
+
+.anchor-attachment-page .overlay-title {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.5rem !important;
+    color: #ffd700 !important;
+}
+
+.anchor-attachment-page .overlay-text {
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.4 !important;
+}
+
+.anchor-attachment-page .overlay-specs {
+    font-size: 0.8rem !important;
+    line-height: 1.6 !important;
+}
+
+.anchor-attachment-page .overlay-specs div {
+    margin-bottom: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.anchor-attachment-page .overlay-specs div:last-child {
+    border-bottom: none !important;
+}
+
+.anchor-attachment-page .component-info-panel {
+    background: #fff !important;
+    border-radius: 1rem !important;
+    padding: 2rem !important;
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.1) !important;
+    height: fit-content !important;
+}
+
+.anchor-attachment-page .component-main-title {
+    color: #1976d2 !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+}
+
+.anchor-attachment-page .component-description {
+    font-size: 1.1rem !important;
+    color: #666 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.anchor-attachment-page .specs-table {
+    background: #f8faff !important;
+    border-radius: 0.8rem !important;
+    padding: 1.5rem !important;
+    border: 1px solid #e3f0ff !important;
+}
+
+.anchor-attachment-page .spec-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.8rem 0 !important;
+    border-bottom: 1px solid #e3f0ff !important;
+}
+
+.anchor-attachment-page .spec-row:last-child {
+    border-bottom: none !important;
+}
+
+.anchor-attachment-page .spec-label {
+    font-weight: 600 !important;
+    color: #1976d2 !important;
+    font-size: 0.95rem !important;
+}
+
+.anchor-attachment-page .spec-value {
+    font-weight: 500 !important;
+    color: #333 !important;
+    font-size: 0.95rem !important;
+}
+
+.anchor-attachment-page .vertical-features {
+    margin-top: 2rem !important;
+}
+
+.anchor-attachment-page .features-header {
+    color: #1976d2 !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+}
+
+.anchor-attachment-page .feature-list-vertical {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
+
+.anchor-attachment-page .feature-item-vertical {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+    background: #f8faff !important;
+    border-radius: 0.5rem !important;
+    border-left: 3px solid #1976d2 !important;
+    transition: all 0.2s ease !important;
+}
+
+.anchor-attachment-page .feature-item-vertical:hover {
+    background: #e3f0ff !important;
+    transform: translateX(5px) !important;
+}
+
+.anchor-attachment-page .feature-icon-vertical {
+    width: 35px !important;
+    height: 35px !important;
+    background: #1976d2 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+    flex-shrink: 0 !important;
+}
+
+.anchor-attachment-page .feature-text-vertical h5 {
+    margin: 0 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #1976d2 !important;
+}
+
+.anchor-attachment-page .feature-text-vertical small {
+    color: #666 !important;
+    font-size: 0.85rem !important;
+}
+
+/* Responsive for the page */
+@media (max-width: 991.98px) {
+    .anchor-attachment-page .component-detail-image {
+        height: 200px !important;
+    }
+    
+    .anchor-attachment-page .component-main-title {
+        font-size: 1.7rem !important;
+    }
+    
+    .anchor-attachment-page .component-info-panel {
+        padding: 1.5rem !important;
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .anchor-attachment-page .component-detail-image {
+        height: 180px !important;
+    }
+    
+    .anchor-attachment-page .component-main-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .anchor-attachment-page .spec-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.3rem !important;
+    }
+    
+    .anchor-attachment-page .feature-item-vertical {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 0.5rem !important;
+    }
 }

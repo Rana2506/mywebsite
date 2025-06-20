@@ -1,86 +1,403 @@
 ---
 layout: default
-title: "About Us"
+title: About Us
 permalink: /about.html
 ---
 
-<section class="position-relative d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh; height: auto; overflow: hidden; padding: 0; margin: 0;">
-    <!-- Full-page background image -->
-    <div style="position: absolute; inset: 0; z-index: 0;">
-        <img src="{{ site.baseurl }}/assets/images/about-us.png" alt="About HSSPL" style="width: 100vw; height: 100%; min-height: 100vh; object-fit: cover; opacity: 0.13; filter: blur(1.5px); position: absolute; bottom: 0; left: 0;">
-    </div>
-    <div class="container position-relative d-flex flex-column justify-content-start align-items-center" style="z-index: 1; min-height: 100vh; padding-top: 4.5rem; padding-bottom: 2.5rem;">
-        <div class="row w-100 justify-content-center align-items-center" style="min-height: 80px;">
-            <div class="col-12 text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                <h2 class="mb-4" style="color:#1a237e; font-weight: 700; letter-spacing: 1px; text-shadow: 1px 2px 8px #b3c6ff; font-size: 2.2rem;">About Us</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center w-100" style="min-height: 0;">
-            <div class="col-lg-12 col-xl-10">
-                <div class="p-4 rounded-4 shadow-lg" style="background: rgba(255,255,255,0.0); box-shadow: none; border-left: 8px solid #1976d2;">
-                    <p style="font-size: 1.1rem; color: #222; font-weight: 500;">
-                        <span style="color: #1976d2; font-weight: 700; font-size: 1.15rem;">Heinrich Safety Solutions Private Limited (HSSPL)</span> is committed to delivering world-class safety solutions that protect people, property, and the environment. With years of expertise and a passion for innovation, we offer a comprehensive portfolio of safety products and services tailored to diverse industry needs.
-                    </p>
-                    <p style="font-size: 1.1rem; color: #222;">
-                        Our dedicated team partners with organizations to assess risks, design effective safety strategies, and implement solutions that ensure compliance and peace of mind. We believe in building lasting relationships based on trust, reliability, and excellence.
-                    </p>
-                    <div class="row text-center mt-4 g-3">
-                        <div class="col-12 col-sm-6 col-md-3 mb-3 mb-md-0">
-                            <div class="p-3 rounded-3" style="background: #e3f2fd; color: #1976d2; font-weight: 600; font-size: 1.05rem; box-shadow: 0 2px 8px 0 rgba(25,118,210,0.07); min-width: 120px;">
-                                <i class="bi bi-people-fill" style="font-size: 2rem;"></i><br>Expert Team
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3 mb-3 mb-md-0">
-                            <div class="p-3 rounded-3" style="background: #fffde7; color: #f9a825; font-weight: 600; font-size: 1.05rem; box-shadow: 0 2px 8px 0 rgba(249,168,37,0.07); min-width: 120px;">
-                                <i class="bi bi-lightbulb-fill" style="font-size: 2rem;"></i><br>Innovative Solutions
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3 mb-3 mb-md-0">
-                            <div class="p-3 rounded-3" style="background: #e8f5e9; color: #388e3c; font-weight: 600; font-size: 1.05rem; box-shadow: 0 2px 8px 0 rgba(56,142,60,0.07); min-width: 120px;">
-                                <i class="bi bi-shield-check" style="font-size: 2rem;"></i><br>Trusted Safety
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3">
-                            <div class="p-3 rounded-3" style="background: #fce4ec; color: #c2185b; font-weight: 600; font-size: 1.05rem; box-shadow: 0 2px 8px 0 rgba(194,24,91,0.07); min-width: 120px;">
-                                <i class="bi bi-award-fill" style="font-size: 2rem;"></i><br>Quality Service
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.hero-section.position-relative.mb-5 {
+    margin-bottom: 0 !important;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background-image: url('/assets/images/about_us_hero.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
-html {
-  background: transparent !important;
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
-footer, .footer {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+.hero-section > div {
+    position: relative;
+    z-index: 2;
 }
-@media (max-width: 767.98px) {
-  .container.position-relative {
-    min-height: unset !important;
-    padding-top: 2.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-  h2.mb-4 {
-    font-size: 2rem !important;
-    margin-bottom: 1.5rem !important;
-  }
-  .row.text-center.mt-4.g-3 > div[class^='col-'] {
-    margin-bottom: 1rem !important;
-  }
-  .rounded-3 {
-    min-width: 100px !important;
-    font-size: 0.98rem !important;
-    padding: 1rem 0.5rem !important;
-  }
+@media (max-width: 768px) {
+    .hero-section.position-relative.mb-5 { min-height: 350px; }
+}
+.section-underline {
+    width: 70px;
+    height: 5px;
+    background: linear-gradient(90deg, #00C4B4 0%, #0056D2 100%);
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.section-underline .moving-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 7px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    animation: moveDot 3s linear infinite;
+}
+@keyframes moveDot {
+    0% { left: 0%; }
+    50% { left: 100%; }
+    100% { left: 0%; }
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f4f8fc;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 32px 24px;
+  gap: 32px;
+}
+.about-left {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.about-img-main {
+  border-radius: 18px;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  display: block;
+  position: relative;
+}
+.about-img-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.about-img-row > div {
+  position: relative;
+  flex: 1;
+  height: 120px;
+  overflow: hidden;
+}
+.about-img-small {
+  flex: 1;
+  border-radius: 14px;
+  height: 120px;
+  object-fit: cover;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+.about-img-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 12px 12px 12px;
+  border-radius: 0 0 18px 18px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+.about-img-caption.red {
+  background: rgba(220, 60, 60, 0.685);
+}
+.about-img-caption.green {
+  background: rgba(4, 133, 75, 0.527);
+}
+
+.about-right {
+  flex: 2 1 480px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #22325a;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+.about-desc {
+  font-size: 1.13rem;
+  color: #333;
+  margin-bottom: 22px;
+  line-height: 1.7;
+}
+.about-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  color: #22325a;
+  letter-spacing: 0.5px;
+}
+.about-list {
+  margin-bottom: 18px;
+  padding-left: 18px;
+}
+.about-list li {
+  margin-bottom: 7px;
+  font-size: 1.08rem;
+}
+.about-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 32px;
+  margin-bottom: 28px;
+}
+.about-feature {
+  flex: 1 1 220px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.about-feature-icon {
+  font-size: 1.7rem;
+  margin-top: 2px;
+}
+.about-feature-title {
+  font-weight: 700;
+  color: #22325a;
+  font-size: 1.08rem;
+}
+.about-feature-desc {
+  font-size: 0.98rem;
+  color: #444;
+}
+.about-stats {
+  display: flex;
+  gap: 0;
+  margin-top: 18px;
+  background: none;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.about-stat {
+  background: none;
+  border-radius: 0;
+  padding: 0 10px;
+  text-align: center;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.about-stat-icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+.about-stat-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #22325a;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+.about-stat-label {
+  font-size: 0.98rem;
+  color: #555;
+  font-weight: 600;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.2px;
+  margin-top: 2px;
+  line-height: 1.2;
+}
+@media (max-width: 900px) {
+  .about-container { flex-direction: column; padding: 18px 6px; }
+  .about-left { order: 2; }
+  .about-right { order: 1; padding: 18px 10px; }
+}
+@media (max-width: 700px) {
+  .about-stats { flex-direction: column; align-items: stretch; }
+  .about-stat { padding: 10px 0; }
 }
 </style>
+
+<div class="hero-section position-relative mb-5">
+  <div class="text-center text-white p-4" style="max-width: 1000px; margin: 0 auto; width: 100%;">
+    <nav aria-label="breadcrumb" class="mb-2">
+      <ol class="breadcrumb justify-content-center" style="background:transparent;">
+        <li class="breadcrumb-item"><a href="/" style="color:#fff; text-decoration:none;">Home</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">About Us</li>
+      </ol>
+    </nav>
+    <h1 class="display-5 fw-bold mb-3" style="letter-spacing: 1px;">About Us</h1>
+    <p class="lead mb-0" style="font-size:1.1rem; font-weight:400;">Your Safety, Our Priority</p>
+    <div class="section-underline mx-auto"><span class="moving-dot"></span></div>
+  </div>
+</div>
+
+<div class="about-container">
+  <div class="about-left">
+    <div style="position:relative; overflow:hidden; border-radius:18px; height:340px;">
+      <img src="/assets/images/about_us_main_updated.png" alt="Our Team in Action" class="about-img-main">
+      <div class="about-img-caption" style="background:rgba(60,60,200,0.85);">Our Team in Action</div>
+    </div>
+    <div class="about-img-row">
+      <div style="position:relative; flex:0 0 auto; display:flex; justify-content:center;">
+        <img src="/assets/images/about_us_landscape_01.png" alt="Creative Workspace" class="about-img-small">
+        <div class="about-img-caption red">Creative Workspace</div>
+      </div>
+      <div style="position:relative; flex:0 0 auto; display:flex; justify-content:center;">
+        <img src="/assets/images/about_us_landscape_02.png" alt="Global Connections" class="about-img-small">
+        <div class="about-img-caption green">Global Connections</div>
+      </div>
+    </div>
+    <div class="about-section-title">Why Choose Us</div>
+    <div class="about-features">
+      <div class="about-feature">
+        <span class="about-feature-icon" style="color:#6c2bd7;">&#9881;</span>
+        <div>
+          <div class="about-feature-title">Safety-First Approach</div>
+          <div class="about-feature-desc">We don’t just meet standards — we aim to exceed them.</div>
+        </div>
+      </div>
+      <div class="about-feature">
+        <span class="about-feature-icon" style="color:#e23b3b;">&#128104;&#8205;&#128295;</span>
+        <div>
+          <div class="about-feature-title">Expertise</div>
+          <div class="about-feature-desc">Our team includes trained professionals with in-depth technical knowledge and hands-on experience in fall protection engineering.</div>
+        </div>
+      </div>
+      <div class="about-feature">
+        <span class="about-feature-icon" style="color:#00b86b;">&#128295;</span>
+        <div>
+          <div class="about-feature-title">Customization</div>
+          <div class="about-feature-desc">We understand that safety is not one-size-fits-all. Our solutions are tailor-made to meet site-specific challenges.</div>
+        </div>
+      </div>
+      <div class="about-feature">
+        <span class="about-feature-icon" style="color:#22325a;">&#128274;</span>
+        <div>
+          <div class="about-feature-title">Commitment to Compliance</div>
+          <div class="about-feature-desc">All our systems are developed in accordance with national and international safety standards such as OSHA, EN, and IS codes.</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-stats">
+      <div class="about-stat">
+        <span class="about-stat-icon" style="font-size:2rem;color:#00b894;margin-bottom:4px;">&#128181;</span>
+        <div class="about-stat-value">Affordable Price</div>
+        <div class="about-stat-label">Best Value</div>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-icon" style="font-size:2rem;color:#0984e3;margin-bottom:4px;">&#128161;</span>
+        <div class="about-stat-value">Innovative Design</div>
+        <div class="about-stat-label">Modern Solutions</div>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-icon" style="font-size:2rem;color:#00b894;margin-bottom:4px;">&#128205;</span>
+        <div class="about-stat-value">Pan India Service</div>
+        <div class="about-stat-label">Nationwide Reach</div>
+      </div>
+    </div>
+    <div class="about-img-row" style="margin-top:18px; justify-content:center; display:flex; gap:12px;">
+      <div style="position:relative; flex:0 0 auto; display:flex; justify-content:center;">
+        <img src="/assets/images/about_us_landscape_03.png" alt="Guardrail" class="about-img-small">
+        <div class="about-img-caption red">Guardrail</div>
+      </div>
+      <div style="position:relative; flex:0 0 auto; display:flex; justify-content:center;">
+        <img src="/assets/images/about_us_landscape_04.png" alt="Skylight Protection" class="about-img-small">
+        <div class="about-img-caption green">Skylight Protection</div>
+      </div>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="about-title">INNOVATING THE FUTURE OF SAFETY</div>
+    <div class="about-desc">
+      Heinrich Safety Solutions Pvt. Ltd. is a forward-thinking safety solutions provider established in 2025, committed to protecting lives through innovation, precision, and adherence to global safety standards. Corporate Office at canal street road, Shreebhumi, Laketown, Kolkata-70048, we specialize in designing, supplying, and implementing high-quality Lifeline Safety Systems, Fall Arrest Systems, and Personal Protective Equipment (PPE) across various industrial and commercial sectors.<br><br>
+      Our company draws its core inspiration from the Heinrich Safety Pyramid, a foundational principle in occupational safety that underscores the importance of proactive risk management and incident prevention. At Heinrich Safety Solutions, we believe that every near miss is a warning, every hazard is preventable, and every life matters. This philosophy shapes our approach to safety — focusing on early interventions and rigorous system reliability to prevent serious incidents before they happen.
+    </div>
+    <div class="about-section-title">Our Mission</div>
+    <div class="about-desc">
+      Our mission is simple yet powerful: To create safer workplaces by delivering advanced, reliable, and customized safety solutions tailored to meet the unique challenges of every client. We partner with businesses across sectors to help them achieve regulatory compliance, operational efficiency, and, most importantly, peace of mind when it comes to worker safety.
+    </div>
+    <div class="about-section-title">What We Offer</div>
+    <ul class="about-list">
+      <li><b>Lifeline Safety Systems</b> – Engineered solutions for rooftop, vertical, and horizontal fall protection, meeting international safety norms.</li>
+      <li><b>Fall Arrest Systems</b> – High-performance, certified systems designed to arrest falls effectively and minimize injury risk.</li>
+      <li><b>Personal Protective Equipment (PPE)</b> – Durable, ergonomic, and compliant protective gear tailored for industrial use.</li>
+    </ul>
+    <div class="about-desc">
+      Every product we offer undergoes strict quality checks and is backed by a team of experienced professionals who ensure seamless integration, installation, and after-sales support.
+    </div>
+    <div class="about-section-title">Our Promise</div>
+    <div class="about-desc">
+      At Heinrich Safety Solutions Pvt. Ltd., we don’t just deliver equipment — we deliver trust. Our tagline, "Your Safety, Our Priority", is more than a statement — it's a responsibility we uphold in every project, every product, and every partnership.<br><br>
+      Join us in building safer workplaces, where every worker returns home safely — every day.
+    </div>
+  </div>
+</div> <!-- end .about-container -->
+
+<!-- Contact & Location Section -->
+<section class="contact-section" style="width:100%; padding:60px 24px; margin-top:40px; background-color:#fff; border-radius:8px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:60px;">
+    <div style="flex:1 1 300px; background-color:#c4d5f8; padding:24px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h4 style="font-size:1.25rem; color:#22325a; margin-bottom:12px;">
+        <span style="font-size:1.5rem; color:#0984e3; vertical-align:middle; margin-right:8px;">&#128205;</span>
+        Our Location
+      </h4>
+      <address style="font-style:normal; line-height:1.6; color:#444; margin:0;">
+        Heinrich Safety Solutions Pvt. Ltd.<br>
+        Canal Street Road, Shreebhumi, Laketown,<br>
+        Kolkata - 700048, India
+      </address>
+    </div>
+    <div style="flex:1 1 300px; background-color:#fff; padding:0; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); overflow:hidden;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d920.8682375628298!2d88.4015268087387!3d22.598807451889808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275606e57b1fd%3A0x6bbf81fd80092504!2sHeinrich%20Safety%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1749954642534!5m2!1sen!2sin"
+        style="border:0; width:100%; height:200px;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div style="flex:1 1 300px; background-color:#daf7d7; padding:24px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h4 style="font-size:1.25rem; color:#22325a; margin-bottom:12px;">
+        <span style="font-size:1.5rem; color:#00b894; vertical-align:middle; margin-right:8px;">&#9742;</span>
+        Contact Us
+      </h4>
+      <ul style="list-style:none; padding:0; margin:0; font-size:1rem; line-height:1.8; color:#444;">
+        <li style="position:relative; padding-left:70px; margin-bottom:8px;">
+          <span style="position:absolute; left:10px; top:50%; transform:translateY(-50%); font-size:1.2rem; display:flex; align-items:center;">
+            <i class="fa fa-phone-square" style="color:#0984e3;"></i>
+            <span style="margin:0 4px; color:#444;">/</span>
+            <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+          </span>
+           <span>+91-8981-840-013</span><br>
+           <span>+91-8981-840-014</span>
+         </li>
+        <li><span style="font-size:1.2rem; color:#0984e3; vertical-align:middle; margin-right:6px;">&#9993;</span><strong>Email:</strong> info@heinrichsafety.com</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+

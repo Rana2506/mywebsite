@@ -1,0 +1,369 @@
+---
+layout: default
+title: Search Results | HSSPL
+permalink: /search.html
+---
+
+<style>
+.search-hero {
+  background: linear-gradient(135deg, rgba(0, 50, 200, 0.8), rgba(0, 0, 0, 0.6));
+  padding: 80px 0 40px;
+  color: white;
+}
+
+.search-results-section {
+  min-height: 60vh;
+  padding: 40px 0;
+}
+
+.search-result-item {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.search-result-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-color: #007bff;
+}
+
+.search-result-title {
+  color: #007bff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.search-result-title:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.search-result-category {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.search-result-description {
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.search-result-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-result-features li {
+  color: #28a745;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.search-result-features li:before {
+  content: "✓ ";
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+.no-results i {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.search-summary {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border-left: 4px solid #007bff;
+}
+
+.loading-spinner {
+  display: none;
+  text-align: center;
+  padding: 40px;
+}
+
+.filter-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  background: white;
+  border: 1px solid #dee2e6;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 4px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filter-button:hover, .filter-button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .search-hero {
+    padding: 60px 0 30px;
+  }
+  
+  .search-result-item {
+    padding: 15px;
+  }
+}
+</style>
+
+<!-- Search Hero -->
+<section class="search-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="display-4 fw-bold mb-3">Search Results</h1>
+        <p class="lead mb-4">Find the perfect safety solution for your needs</p>
+        
+        <!-- Enhanced Search Bar -->
+        <div class="search-container">
+          <div class="input-group mb-3">
+            <input type="text" id="searchInput" class="form-control form-control-lg" 
+                   placeholder="Search for products, categories, or features..." 
+                   aria-label="Search">
+            <button class="btn btn-light btn-lg" type="button" id="searchButton">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Search Results Section -->
+<section class="search-results-section">
+  <div class="container">
+    
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+      <i class="fas fa-spinner fa-spin fa-2x text-primary"></i>
+      <p class="mt-3">Searching products...</p>
+    </div>
+
+    <!-- Search Summary -->
+    <div class="search-summary" id="searchSummary" style="display: none;">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h5 class="mb-1">Search Results</h5>
+          <p class="mb-0" id="searchSummaryText">Found results for your query</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <span class="badge bg-primary fs-6" id="resultCount">0 results</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="filter-section" id="filterSection" style="display: none;">
+      <h6 class="mb-3">Filter by Category:</h6>
+      <div class="filter-buttons">
+        <button class="filter-button active" data-category="all">All Products</button>
+        <button class="filter-button" data-category="ppe">Personal Protective Equipment</button>
+        <button class="filter-button" data-category="lifeline">Life Line System</button>
+        <button class="filter-button" data-category="fall-arrest">Fall Arrest System</button>
+        <button class="filter-button" data-category="guardrail">Rooftop Guardrail</button>
+        <button class="filter-button" data-category="skylight">Skylight Protection</button>
+      </div>
+    </div>
+
+    <!-- Search Results Container -->
+    <div id="searchResults">
+      <!-- Results will be populated by JavaScript -->
+    </div>
+
+    <!-- No Results Message -->
+    <div class="no-results" id="noResults" style="display: none;">
+      <i class="fas fa-search"></i>
+      <h4>No Results Found</h4>
+      <p class="mb-4">We couldn't find any products matching your search criteria.</p>
+      <div class="suggestions">
+        <h6>Try searching for:</h6>
+        <div class="mt-3">
+          <button class="btn btn-outline-primary btn-sm me-2 mb-2" onclick="performSearch('safety helmet')">Safety Helmet</button>
+          <button class="btn btn-outline-primary btn-sm me-2 mb-2" onclick="performSearch('gloves')">Gloves</button>
+          <button class="btn btn-outline-primary btn-sm me-2 mb-2" onclick="performSearch('harness')">Harness</button>
+          <button class="btn btn-outline-primary btn-sm me-2 mb-2" onclick="performSearch('anchor')">Anchor</button>
+          <button class="btn btn-outline-primary btn-sm me-2 mb-2" onclick="performSearch('lifeline')">Lifeline</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+// Use the centralized search functionality
+let filteredResults = [];
+let currentFilter = 'all';
+
+function performSearch(query = null) {
+  const searchInput = document.getElementById('searchInput');
+  const searchQuery = query || searchInput.value.trim().toLowerCase();
+  
+  if (!searchQuery) {
+    showAllProducts();
+    return;
+  }
+
+  // Show loading
+  showLoading(true);
+  
+  // Simulate search delay for better UX
+  setTimeout(() => {
+    const results = HSSPL_SEARCH.search(searchQuery, { category: currentFilter });
+    filteredResults = results;
+    displayResults(results, searchQuery);
+    showLoading(false);
+  }, 300);
+}
+
+function displayResults(results, query) {
+  const resultsContainer = document.getElementById('searchResults');
+  const noResultsDiv = document.getElementById('noResults');
+  const searchSummary = document.getElementById('searchSummary');
+  const filterSection = document.getElementById('filterSection');
+  const resultCount = document.getElementById('resultCount');
+  const searchSummaryText = document.getElementById('searchSummaryText');
+
+  if (results.length === 0) {
+    resultsContainer.innerHTML = '';
+    noResultsDiv.style.display = 'block';
+    searchSummary.style.display = 'none';
+    filterSection.style.display = 'none';
+    return;
+  }
+
+  noResultsDiv.style.display = 'none';
+  searchSummary.style.display = 'block';
+  filterSection.style.display = 'block';
+  
+  resultCount.textContent = `${results.length} result${results.length !== 1 ? 's' : ''}`;
+  searchSummaryText.textContent = query ? `Found ${results.length} result${results.length !== 1 ? 's' : ''} for "${query}"` : `Showing ${results.length} product${results.length !== 1 ? 's' : ''}`;
+
+  resultsContainer.innerHTML = results.map(product => `
+    <div class="search-result-item" data-category="${product.category}">
+      <div class="search-result-category">${product.categoryName}</div>
+      <a href="${product.url}" class="search-result-title">${product.title}</a>
+      <p class="search-result-description">${product.description}</p>
+      ${product.features.length > 0 ? `
+        <ul class="search-result-features">
+          ${product.features.slice(0, 3).map(feature => `<li>${feature}</li>`).join('')}
+        </ul>
+      ` : ''}
+    </div>
+  `).join('');
+}
+
+function showAllProducts() {
+  filteredResults = HSSPL_SEARCH.getByCategory(currentFilter);
+  displayResults(filteredResults, '');
+}
+
+function showLoading(show) {
+  const loadingSpinner = document.getElementById('loadingSpinner');
+  const searchResults = document.getElementById('searchResults');
+  const searchSummary = document.getElementById('searchSummary');
+  const filterSection = document.getElementById('filterSection');
+  
+  if (show) {
+    loadingSpinner.style.display = 'block';
+    searchResults.style.display = 'none';
+    searchSummary.style.display = 'none';
+    filterSection.style.display = 'none';
+  } else {
+    loadingSpinner.style.display = 'none';
+    searchResults.style.display = 'block';
+  }
+}
+
+function filterByCategory(category) {
+  currentFilter = category;
+  
+  // Update filter buttons
+  document.querySelectorAll('.filter-button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.querySelector(`[data-category="${category}"]`).classList.add('active');
+  
+  // Re-display results with new filter
+  const searchInput = document.getElementById('searchInput');
+  const query = searchInput.value.trim();
+  
+  if (query) {
+    performSearch();
+  } else {
+    showAllProducts();
+  }
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('searchInput');
+  const searchButton = document.getElementById('searchButton');
+
+  // Get search query from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get('q');
+  
+  if (query) {
+    searchInput.value = query;
+    performSearch();
+  } else {
+    showAllProducts();
+  }
+
+  // Search on button click
+  searchButton.addEventListener('click', performSearch);
+
+  // Search on Enter key
+  searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      performSearch();
+    }
+  });
+
+  // Filter buttons
+  document.querySelectorAll('.filter-button').forEach(button => {
+    button.addEventListener('click', function() {
+      const category = this.dataset.category;
+      filterByCategory(category);
+    });
+  });
+});
+</script>

@@ -1,0 +1,112 @@
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.company.name }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/assets/images/logo.png",
+  "description": "{{ site.description }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.company.address }}",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ site.company.phone }}",
+    "contactType": "customer service",
+    "email": "{{ site.company.email }}"
+  },
+  "sameAs": [
+    "{{ site.social.facebook }}",
+    "{{ site.social.linkedin }}",
+    "{{ site.social.twitter }}"
+  ]
+}
+</script>
+
+{% if page.url == "/" %}
+<!-- Website Schema for Homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}/search.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{% endif %}
+
+{% if page.product_type %}
+<!-- Product Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ site.company.name }}"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "{{ site.company.name }}"
+  },
+  "category": "{{ page.product_type }}",
+  "image": "{% if page.image %}{{ site.url }}{{ page.image }}{% endif %}"
+}
+</script>
+{% endif %}
+
+{% if page.service_type %}
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.company.name }}",
+    "url": "{{ site.url }}"
+  },
+  "serviceType": "{{ page.service_type }}",
+  "areaServed": "India"
+}
+</script>
+{% endif %}
+
+<!-- Breadcrumb Schema -->
+{% if page.breadcrumbs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}"
+    }
+    {% for breadcrumb in page.breadcrumbs %}
+    ,{
+      "@type": "ListItem",
+      "position": {{ forloop.index | plus: 1 }},
+      "name": "{{ breadcrumb.name }}",
+      "item": "{{ site.url }}{{ breadcrumb.url }}"
+    }
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

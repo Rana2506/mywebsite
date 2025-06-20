@@ -1,80 +1,383 @@
 ---
 layout: default
 title: Fall Arrest System | HSSPL
-permalink: /fall-protection-system.html
+permalink: /fall-arrest-system.html
 ---
 
-<!-- Hero Image Section -->
-<br>
-<div class="container-fluid px-0">
-    <div class="overflow-hidden" style="width: 100%;">
-        <img src="{{ site.baseurl }}/assets/images/fall_protection_system.png"
-             alt="Fall Arrest System"
-             class="w-100"
-             style="height: 320px; object-fit: contain; background: #fff;">
+<!-- Hero Section with Breadcrumb -->
+<section class="hero-section position-relative d-flex align-items-center justify-content-center text-white" style="
+  height: 60vh; 
+  background: linear-gradient(rgba(227, 6, 19, 0.7), rgba(0, 0, 0, 0.6)), 
+              url('{{ site.baseurl }}/assets/images/lifeline_hero.png') center/cover;
+  background-attachment: fixed;
+">
+  <div class="container text-center">
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb justify-content-center bg-transparent p-0 mb-0">        <li class="breadcrumb-item">
+          <a href="{{ site.baseurl }}/" class="text-white text-decoration-none opacity-75 hover-opacity-100">
+            Home
+          </a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="{{ site.baseurl }}/products.html" class="text-white text-decoration-none opacity-75 hover-opacity-100">
+            Products
+          </a>
+        </li>
+        <li class="breadcrumb-item active text-white" aria-current="page">
+          Fall Arrest System
+        </li>
+      </ol>
+    </nav>
+    
+    <!-- Hero Header -->
+    <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInUp">
+      Fall Arrest System
+    </h1>
+    
+    <!-- Hero Subheading -->
+    <p class="lead fs-4 mb-4 opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
+      Advanced fall protection systems designed to prevent workplace injuries and ensure worker safety at height
+    </p>
+      <!-- Call to Action -->
+    <div class="animate__animated animate__fadeInUp animate__delay-2s">
+      <a href="{{ site.baseurl }}/contact-us.html" class="btn btn-outline-light btn-lg px-4 py-3 shadow-lg">
+        <i class="fas fa-phone me-2"></i>Get Quote
+      </a>
     </div>
-</div>
-<br>
-<div class="row justify-content-center mb-4">
-    <div class="col-md-8">
-        <div class="container-fluid px-0">
-            <div class="card-body text-center">
-                <p class="card-text" style="color:#001489; font-weight:500;">Comprehensive Fall Arrest System Solutions</p>
-            </div>
-        </div>
-    </div>
-</div>
+  </div>
+</section>
+
+<!-- Custom Styles for Hero Section -->
+<style>
+.hero-section {
+  background-attachment: fixed;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: rgba(255, 255, 255, 0.7);
+}
+.hover-opacity-100:hover {
+  opacity: 1 !important;
+}
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+    background-attachment: scroll;
+  }  .display-3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Modern Fall Arrest Card Styles */
+.fall-arrest-card {
+  border: none;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  height: 100%;
+}
+
+.fall-arrest-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(227, 6, 19, 0.15);
+}
+
+.fall-arrest-card-img-container {
+  position: relative;
+  height: 220px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  overflow: hidden;
+  border-bottom: 3px solid #f1f3f4;
+}
+
+.fall-arrest-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+  padding: 0;
+  transition: transform 0.4s ease;
+}
+
+.fall-arrest-card:hover .fall-arrest-card-img {
+  transform: scale(1.08);
+}
+
+.fall-arrest-card-category {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(227, 6, 19, 0.95);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+.fall-arrest-card:hover .fall-arrest-card-category {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fall-arrest-card-body {
+  padding: 2rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fall-arrest-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fall-arrest-card-description {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.fall-arrest-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.fall-arrest-card-features li {
+  font-size: 0.9rem;
+  color: #495057;
+  padding: 0.4rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.fall-arrest-card-features li:before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+}
+
+.fall-arrest-card-footer {
+  padding: 0;
+  background: none;
+  border: none;
+  margin-top: auto;
+}
+
+.fall-arrest-card-btn {
+  background: linear-gradient(135deg, #e30613 0%, #c50410 100%);
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fall-arrest-card-btn:hover {
+  background: linear-gradient(135deg, #c50410 0%, #a0030e 100%);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(227, 6, 19, 0.4);
+}
+
+.fall-arrest-card-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s;
+}
+
+.fall-arrest-card-btn:hover:before {
+  left: 100%;
+}
+
+/* Color variations for different products */
+.fall-arrest-card.card-primary .fall-arrest-card-img-container {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+.fall-arrest-card.card-success .fall-arrest-card-img-container {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.fall-arrest-card.card-warning .fall-arrest-card-img-container {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffcc02 100%);
+}
+
+.fall-arrest-card.card-info .fall-arrest-card-img-container {
+  background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%);
+}
+
+@media (max-width: 768px) {
+  .fall-arrest-card-img-container {
+    height: 200px;
+  }  .fall-arrest-card-img {
+    padding: 0;
+  }
+  .fall-arrest-card-body {
+    padding: 1.5rem;
+  }
+  .fall-arrest-card-title {
+    font-size: 1.1rem;
+    min-height: 3rem;
+  }
+}
+</style>
 <!-- Main Content: Card Grid View for Fall Arrest Products -->
-<section class="py-5 bg-light">
+<section id="fall-arrest-products" class="py-5 bg-light">
     <div class="container">
-        <h1 class="mb-4 text-center text-primary fw-semibold">Fall Arrest System Products</h1>
-        <div class="row justify-content-center g-4">
+        <div class="text-center mb-5">
+            <h2 class="mb-3 text-primary fw-semibold">Fall Arrest System Products</h2>
+            <p class="lead text-muted">
+                Professional fall protection equipment ensuring safety and compliance across all work environments
+            </p>        </div>        <div class="row g-4 justify-content-center">
             <!-- Card 1: Retractable Fall Arrester Block -->
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card h-100 shadow product-card border-primary" style="background: #f8faff; border-width: 2px;">
-                    <img src="{{ site.baseurl }}/assets/images/retractable_fall_arrester_03.png" class="card-img-top p-0" alt="Retractable Fall Arrester Block" style="width: 100%; height: 180px; object-fit: contain; background: #e3f2fd; border-radius: 0.7rem 0.7rem 0 0;">
-                    <div class="card-body text-center p-3">
-                        <h5 class="card-title product-title text-primary fw-bold" style="font-size: 1.25rem; letter-spacing: 0.5px;">Retractable Fall Arrester Block</h5>
-                        <p class="card-text product-text" style="font-size: 1.02rem; color: #222;">Automatic locking device that arrests a fall within a short distance, ideal for overhead applications.</p>
+            <div class="col-lg-3 col-md-6 col-sm-8">
+                <div class="card fall-arrest-card card-primary">
+                    <div class="fall-arrest-card-img-container">
+                        <img src="{{ site.baseurl }}/assets/images/retractable_fall_arrester_03.png" class="fall-arrest-card-img" alt="Retractable Fall Arrester Block">
+                        <div class="fall-arrest-card-category">
+                            <i class="fas fa-shield-alt me-1"></i>FALL ARREST
+                        </div>
+                    </div>
+                    <div class="card-body fall-arrest-card-body">
+                        <h5 class="fall-arrest-card-title">Retractable Fall Arrester Block</h5>
+                        <p class="fall-arrest-card-description">Automatic locking device that arrests a fall within a short distance, ideal for overhead applications and confined space work.</p>
+                        <ul class="fall-arrest-card-features">
+                            <li>Automatic fall arrest mechanism</li>
+                            <li>Lightweight aluminum construction</li>
+                            <li>360° swivel connection</li>
+                            <li>Easy one-hand operation</li>
+                        </ul>
+                        <div class="fall-arrest-card-footer">
+                            <button class="btn fall-arrest-card-btn">
+                                <i class="fas fa-phone me-2"></i>Get Quote
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Card 2: Vertical Fall Arrester -->
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card h-100 shadow product-card border-success" style="background: #f8fff8; border-width: 2px;">
-                    <img src="{{ site.baseurl }}/assets/images/vertical_fall_arrester_hsspl.png" class="card-img-top p-0" alt="Vertical Fall Arrester" style="width: 100%; height: 180px; object-fit: contain; background: #e8f5e9; border-radius: 0.7rem 0.7rem 0 0;">
-                    <div class="card-body text-center p-3">
-                        <h5 class="card-title product-title text-success fw-bold" style="font-size: 1.25rem; letter-spacing: 0.5px;">Vertical Fall Arrester</h5>
-                        <p class="card-text product-text" style="font-size: 1.02rem; color: #222;">Designed for safe vertical movement, this device follows the user and locks instantly in the event of a fall.</p>
+            </div>            <!-- Card 2: Vertical Fall Arrester -->
+            <div class="col-lg-3 col-md-6 col-sm-8">
+                <div class="card fall-arrest-card card-success">
+                    <div class="fall-arrest-card-img-container">
+                        <img src="{{ site.baseurl }}/assets/images/vertical_fall_arrester_hsspl.png" class="fall-arrest-card-img" alt="Vertical Fall Arrester">
+                        <div class="fall-arrest-card-category">
+                            <i class="fas fa-shield-alt me-1"></i>FALL ARREST
+                        </div>
+                    </div>
+                    <div class="card-body fall-arrest-card-body">
+                        <h5 class="fall-arrest-card-title">Vertical Fall Arrester</h5>
+                        <p class="fall-arrest-card-description">Designed for safe vertical movement, this device follows the user and locks instantly in the event of a fall on vertical lifelines.</p>
+                        <ul class="fall-arrest-card-features">
+                            <li>Instant locking mechanism</li>
+                            <li>Smooth rope following action</li>
+                            <li>Corrosion resistant materials</li>
+                            <li>Easy installation and use</li>
+                        </ul>
+                        <div class="fall-arrest-card-footer">
+                            <button class="btn fall-arrest-card-btn">
+                                <i class="fas fa-phone me-2"></i>Get Quote
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Card 3: Ascender & Descender -->
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card h-100 shadow product-card border-warning" style="background: #fffdf8; border-width: 2px;">
-                    <img src="{{ site.baseurl }}/assets/images/ascender_descender.png" class="card-img-top p-0" alt="Ascender & Descender" style="width: 100%; height: 180px; object-fit: contain; background: #fffde7; border-radius: 0.7rem 0.7rem 0 0;">
-                    <div class="card-body text-center p-3">
-                        <h5 class="card-title product-title text-warning fw-bold" style="font-size: 1.25rem; letter-spacing: 0.5px;">Ascender & Descender</h5>
-                        <p class="card-text product-text" style="font-size: 1.02rem; color: #222;">Mechanical device for controlled ascent and descent on ropes, ensuring safety during vertical operations.</p>
+            </div>            <!-- Card 3: Ascender & Descender -->
+            <div class="col-lg-3 col-md-6 col-sm-8">
+                <div class="card fall-arrest-card card-warning">
+                    <div class="fall-arrest-card-img-container">
+                        <img src="{{ site.baseurl }}/assets/images/ascender_descender.png" class="fall-arrest-card-img" alt="Ascender & Descender">
+                        <div class="fall-arrest-card-category">
+                            <i class="fas fa-shield-alt me-1"></i>FALL ARREST
+                        </div>
+                    </div>
+                    <div class="card-body fall-arrest-card-body">
+                        <h5 class="fall-arrest-card-title">Ascender & Descender</h5>
+                        <p class="fall-arrest-card-description">Mechanical device for controlled ascent and descent on ropes, ensuring safety during vertical operations and rescue scenarios.</p>
+                        <ul class="fall-arrest-card-features">
+                            <li>Controlled speed operation</li>
+                            <li>Self-braking mechanism</li>
+                            <li>Heat-resistant construction</li>
+                            <li>Ergonomic grip design</li>
+                        </ul>
+                        <div class="fall-arrest-card-footer">
+                            <button class="btn fall-arrest-card-btn">
+                                <i class="fas fa-phone me-2"></i>Get Quote
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Centered last card -->
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-4 d-flex align-items-stretch justify-content-center">
-                <div class="card h-100 shadow product-card border-info" style="background: #f8fcff; border-width: 2px;">
-                    <img src="{{ site.baseurl }}/assets/images/spidermak_kit.png" class="card-img-top p-0" alt="Spidermak Kits" style="width: 100%; height: 180px; object-fit: cover; background: #e3f7ff; border-radius: 0.7rem 0.7rem 0 0;">
-                    <div class="card-body text-center p-3">
-                        <h5 class="card-title product-title text-info fw-bold" style="font-size: 1.25rem; letter-spacing: 0.5px;">Spidermak Kits</h5>
-                        <p class="card-text product-text" style="font-size: 1.02rem; color: #222;">Complete fall arrest kits for various applications, including harness, connectors, and storage bag for maximum safety.</p>
+            </div>            <!-- Card 4: Spidermak Kits -->
+            <div class="col-lg-3 col-md-6 col-sm-8">
+                <div class="card fall-arrest-card card-info">
+                    <div class="fall-arrest-card-img-container">
+                        <img src="{{ site.baseurl }}/assets/images/painting_kit.png" class="fall-arrest-card-img" alt="Spidermak Kits">
+                        <div class="fall-arrest-card-category">
+                            <i class="fas fa-shield-alt me-1"></i>FALL ARREST
+                        </div>
                     </div>
+                    <div class="card-body fall-arrest-card-body">
+                        <h5 class="fall-arrest-card-title">Spiderman Kits</h5>
+                        <p class="fall-arrest-card-description">Complete fall arrest kits for various applications, including harness, connectors, and storage bag for maximum safety and convenience.</p>
+                        <ul class="fall-arrest-card-features">
+                            <li>Complete safety kit solution</li>
+                            <li>Professional grade harness</li>
+                            <li>Multiple connection points</li>
+                            <li>Convenient carrying case</li>
+                        </ul>
+                        <div class="fall-arrest-card-footer">
+                            <button class="btn fall-arrest-card-btn">
+                                <i class="fas fa-phone me-2"></i>Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        <!-- Call to Action Section -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8 text-center">
+                <div class="p-4 bg-white rounded-3 shadow-lg" style="border: 2px solid #e30613;">
+                    <i class="fas fa-headset mb-3" style="font-size: 3rem; color: #e30613;"></i>
+                    <h3 class="mb-3 text-primary fw-bold">Need Expert Guidance?</h3>
+                    <p class="mb-4 text-muted">Our safety experts are ready to help you choose the right fall arrest system for your specific needs.</p>
+                    <a href="{{ site.baseurl }}/contact-us.html" class="btn btn-lg px-5 py-3 shadow-lg" style="background: linear-gradient(135deg, #e30613 0%, #c50410 100%); color: white; border: none; border-radius: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-phone me-2"></i>TALK TO A SAFETY EXPERT
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<div class="w-100 d-flex flex-column align-items-center mt-4">
-    <i class="bi bi-headset" style="font-size: 2.5rem; color: #001489;"></i>
-        <a href="contact-us.html" class="btn btn-success" style="min-width: 180px; font-weight: 600;">Get a Quote</a>
-</div>

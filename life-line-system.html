@@ -4,20 +4,79 @@ title: Life Line System | HSSPL
 permalink: /life-line-system.html
 ---
 
+<!-- Hero Section -->
+<style>
+.hero-section.position-relative.mb-5 {
+  margin-bottom: 0 !important;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 0, 139, 0.6), rgba(0, 0, 139, 0.3)), url('{{ site.baseurl }}/assets/images/lifeline_hero.png') center/cover no-repeat !important;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.hero-section > div {
+  position: relative;
+  z-index: 2;
+}
+.section-underline {
+  width: 70px;
+  height: 5px;
+  background: linear-gradient(90deg, #00C4B4 0%, #0056D2 100%);
+  border-radius: 3px;
+  margin: 0.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.section-underline .moving-dot {
+  position: absolute;
+  top: 50%; left: 0;
+  width: 7px; height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  animation: moveDot 3s linear infinite;
+}
+@keyframes moveDot {
+  0% { left: 0%; }
+  50% { left: 100%; }
+  100% { left: 0%; }
+}
+</style>
 
+<div class="hero-section position-relative mb-5">
+  <div class="text-center text-white p-4" style="max-width: 1000px; margin: 0 auto; width: 100%;">
+    <nav aria-label="breadcrumb" class="mb-2">
+      <ol class="breadcrumb justify-content-center" style="background:transparent;">
+        <li class="breadcrumb-item"><a href="/index.html" style="color:#fff; text-decoration:none;">Home</a></li>
+        <li class="breadcrumb-item"><a href="/products.html" style="color:#fff; text-decoration:none;">Products</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">Life Line System</li>
+      </ol>
+    </nav>
+    <h1 class="display-5 fw-bold mb-3" style="letter-spacing: 1px;">Life Line System</h1>
+    <p class="lead mb-0" style="font-size:1.1rem; font-weight:400;">Comprehensive anchorage solutions for working safely at heights</p>
+    <div class="section-underline mx-auto"><span class="moving-dot"></span></div>
+  </div>
+</div>
+
+<!-- Intro Text Section -->
+<section class="py-4 bg-light text-center">
+  <div class="container">
+    <p class="lead mb-0">At Heinrich Safety Solutions, we specialize in designing and delivering state-of-the-art lifeline safety systems that protect workers operating at heights. Our engineered fall protection solutions are designed to meet the highest safety standards while offering flexibility across various industries such as construction, manufacturing, oil & gas, warehousing, and utilities.</p>
+  </div>
+</section>
 
 <!-- Main Content: Life Line System Section -->
-<section class="py-5" style="background-color: aliceblue;">
-    <div class="container">
-        <h2 class="mb-4 text-center text-primary fw-semibold">Life Line System</h2>
-                <!-- lifeline system Introduction -->
-    <div class="container-fluid">
-        <div class="mb-5 text-center">
-            <p class="lead">
-                Working at height presents significant risks. Safety lifelines create a secure connection between the worker and an anchorage point, helping prevent falls and ensuring a safer working environment. Widely used in industries such as construction, oil and gas, telecommunications, shipbuilding, and warehousing, lifeline systems are essential for regulatory compliance and for safeguarding workers operating in elevated or hazardous areas.
-            </p>
-        </div>
-    </div>
+<section class="py-5" style="background-color: #fff;">
 
         <!-- Gallery Row for Life Line Systems -->
         <div class="lifeline-gallery-row">

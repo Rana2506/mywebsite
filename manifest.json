@@ -1,0 +1,21 @@
+{
+  "name": "Heinrich Safety Solutions",
+  "short_name": "HSSPL",
+  "description": "Premium Safety Equipment & PPE Manufacturer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0056D2",
+  "icons": [
+    {
+      "src": "/assets/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icon-512x512.png",
+      "sizes": "512x512", 
+      "type": "image/png"
+    }
+  ]
+}

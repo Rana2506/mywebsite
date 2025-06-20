@@ -1,0 +1,294 @@
+---
+layout: default
+title: Products | HSSPL
+permalink: /products.html
+---
+
+<style>
+.hero-section.position-relative.mb-5 {
+    margin-bottom: 0 !important;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background-image: url('/assets/images/hero-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.hero-section > div {
+    position: relative;
+    z-index: 2;
+}
+.section-underline {
+    width: 70px;
+    height: 5px;
+    background: linear-gradient(90deg, #00C4B4 0%, #0056D2 100%);
+    border-radius: 3px;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.section-underline .moving-dot {
+    position: absolute;
+    top: 50%; left: 0;
+    width: 7px; height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    animation: moveDot 3s linear infinite;
+}
+@keyframes moveDot {
+    0% { left: 0%; }
+    50% { left: 100%; }
+    100% { left: 0%; }
+}
+
+/* Modern Product Card Styles */
+.products-modern-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+  justify-content: center;
+}
+.product-card-modern {
+  background: #fff;
+  border-radius: 1.1rem;
+  box-shadow: 0 6px 24px rgba(0,86,210,0.10);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: none;
+  width: 356px; /* 16:9 aspect ratio for 200px height: 356px width */
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  will-change: transform;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+.product-card-modern:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(0,86,210,0.18);
+}
+.product-card-modern .product-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-radius: 0 !important;
+  background: #f8f9fa;
+  display: block;
+  image-rendering: auto;
+  transition: all 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.product-card-modern .product-body {
+  padding: 1.1rem 1.1rem 1.1rem 1.1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+}
+.product-card-modern .product-title {
+  color: #22325a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.product-card-modern .product-desc {
+  color: #5a5a5a;
+  font-size: 1.01rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+  min-height: 48px;
+}
+.product-card-modern .product-btns {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: auto;
+}
+.product-card-modern .btn-readmore {
+  background: linear-gradient(90deg, #0056D2 0%, #00C4B4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.98rem;
+  transition: background 0.2s;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.product-card-modern .btn-readmore:hover {
+  background: #333;
+}
+.product-card-modern .btn-joinnow {
+  background: linear-gradient(90deg, #09853c 0%, #0056D2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.98rem;
+  transition: background 0.2s;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.product-card-modern .btn-joinnow:hover {
+  background: #157347;
+}
+@media (max-width: 600px) {
+  .products-modern-row { gap: 1.2rem 0.5rem; }
+  .product-card-modern { width: 100%; }
+  .product-card-modern .product-img { 
+    height: 180px;
+    object-fit: contain;
+    background: #f8f9fa;
+    image-rendering: auto;
+  }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #fff !important;
+  /* Ensures the "/" separator is white */
+}
+</style>
+
+<div class="hero-section position-relative mb-5">
+  <div class="text-center text-white p-4" style="max-width: 1000px; margin: 0 auto; width: 100%;">
+    <nav aria-label="breadcrumb" class="mb-2">
+      <ol class="breadcrumb justify-content-center" style="background:transparent;">
+        <li class="breadcrumb-item"><a href="/" style="color:#fff; text-decoration:none;">Home</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">Products</li>
+      </ol>
+    </nav>
+    <h1 class="display-5 fw-bold mb-3" style="letter-spacing: 1px;">Products</h1>
+    <p class="lead mb-0" style="font-size:1.1rem; font-weight:400;">Explore Our Range of Safety Solutions</p>
+    <div class="section-underline mx-auto"><span class="moving-dot"></span></div>
+  </div>
+</div>
+
+<!-- Product Introduction -->
+<div class="product-intro-section py-4" style="background-color: #fff;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-10 mx-auto">
+        <div class="intro-card p-4 p-md-5" style="background: white; border-radius: 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative; overflow: hidden;">
+          <div class="intro-content position-relative" style="z-index: 2;">
+            <div class="intro-icon mb-3 d-flex align-items-center">
+              <div style="background: linear-gradient(90deg, #00C4B4 0%, #0056D2 100%); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-shield-alt text-white" style="font-size: 1.5rem;"></i>
+              </div>
+              <div class="ms-3">
+                <span class="badge" style="background: linear-gradient(90deg, #00C4B4 0%, #0056D2 100%); font-size: 0.85rem; padding: 0.5rem 1rem; border-radius: 30px;">SAFETY FIRST</span>
+              </div>
+            </div>
+            <p class="lead mb-0" style="font-size: 1.15rem; line-height: 1.7; color: #343a40; position: relative;">
+              We offer a wide range of <strong style="color: #0056D2;">high-quality safety systems</strong> and 
+              <strong style="color: #0056D2;">personal protective equipment (PPE)</strong> designed to ensure 
+              maximum protection in industrial and construction environments. From lifeline systems to advanced 
+              fall arrest solutions, every product meets <strong style="color: #0056D2;">rigorous safety standards</strong>.
+            </p>
+            <div style="position: absolute; bottom: -25px; right: -25px; width: 130px; height: 130px; border-radius: 50%; background: linear-gradient(90deg, rgba(0,196,180,0.1) 0%, rgba(0,86,210,0.1) 100%);"></div>
+          </div>
+          <div style="position: absolute; top: -20px; left: -20px; width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(90deg, rgba(0,196,180,0.08) 0%, rgba(0,86,210,0.08) 100%);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content Placeholder -->
+<section class="py-5" style="background-color: #fff;">
+  <div class="container">
+    <!-- Products Listing -->    <div class="products-modern-row">
+      <!-- Product 1 -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <img src="{{ site.baseurl }}/assets/images/ppe.png" class="product-img" alt="Personal Protective Equipment" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Personal Protective Equipment</div>
+          <div class="product-desc">Certified harnesses, helmets, and accessories for full-body protection.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/ppe.html" class="btn-readmore">Learn More</a>
+            <a href="/products/ppe.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <img src="{{ site.baseurl }}/assets/images/life_line_system.png" class="product-img" alt="Life Line System" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Life Line System</div>
+          <div class="product-desc">Durable cable assemblies with tensioners and intermediate supports.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/lifeline.html" class="btn-readmore">Learn More</a>
+            <a href="/products/lifeline.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+        <img src="{{ site.baseurl }}/assets/images/fall_protection_system.png" class="product-img" alt="Fall Arrest System" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Fall Arrest System</div>
+          <div class="product-desc">Self-retracting lifelines and shock absorbers for rapid fall arrest.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/arrest.html" class="btn-readmore">Learn More</a>
+            <a href="/products/arrest.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 4: Rooftop Guardrail -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+        <img src="{{ site.baseurl }}/assets/images/rooftop_guardrail.png" class="product-img" alt="Rooftop Guardrail" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Rooftop Guardrail</div>
+          <div class="product-desc">Engineered guardrail systems for rooftop fall protection.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/rooftop-guardrail.html" class="btn-readmore">Learn More</a>
+            <a href="/products/rooftop-guardrail.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 5: Skylight Cover -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+        <img src="{{ site.baseurl }}/assets/images/skylight_protection_cover.png" class="product-img" alt="Skylight Cover" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Skylight Cover</div>
+          <div class="product-desc">Durable covers to secure skylights and prevent accidental falls.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/skylight-cover.html" class="btn-readmore">Learn More</a>
+            <a href="/products/skylight-cover.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Products Listing -->
+  </div>
+</section>

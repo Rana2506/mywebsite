@@ -1,167 +1,1127 @@
 ---
 layout: default
-title: Home | HSSPL
+title: "Heinrich Safety Solutions - Premium Safety Equipment & PPE Manufacturer"
+description: "Leading manufacturer and supplier of personal protective equipment (PPE), fall arrest systems, lifeline systems, safety helmets, and industrial safety solutions in India."
+keywords: "safety equipment, PPE, personal protective equipment, fall arrest system, lifeline system, safety helmet, safety gloves, rooftop guardrail, skylight protection, construction safety, industrial safety, safety manufacturer India"
+image: "/assets/images/hero_image_final_1.png"
 ---
-    <!-- Main Content -->
-    <!-- About Us Section with Image -->
-    <section class="about-section py-5" style="background: linear-gradient(90deg, #f0f4ff 60%, #e3f2fd 100%);">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 mb-4 mb-md-0 order-md-2">
-                    <img src="{{ site.baseurl }}/assets/images/welcome.png" alt="About HSSPL" class="img-fluid rounded shadow-lg border border-3 border-primary-subtle">
-                </div>
-                <div class="col-md-7 order-md-1">
-                    <h2 class="mb-4 d-flex align-items-center gap-2" style="color:navy;">
-                        <i class="bi bi-info-circle-fill" style="font-size:2rem;color:#0d6efd;"></i>
-                        <span>About Us</span>
-                    </h2>
-                    <p>
-                        <strong style="color: blue;">Heinrich Safety Solutions Private Limited</strong> is a trusted name in the field of Personal Protective Equipment (PPE) and advanced lifeline safety systems. Established in 2025, our mission is to eliminate fall hazards and ensure the highest level of safety for workers across industries.
-                    </p>
-                    <p>
-                        Guided by the principles of industrial safety and inspired by Heinrich’s Safety Pyramid, we offer a comprehensive range of fall protection solutions tailored to meet the most demanding workplace environments. From innovative lifeline systems to essential PPE, our products are designed to deliver uncompromising performance, reliability, and peace of mind.
-                    </p>
-                    <p>
-                        At Heinrich Safety Solutions, we combine technical expertise with a deep commitment to worker welfare. Every solution we offer is engineered with precision and complies with stringent safety standards, ensuring our clients can maintain safe operations without compromise.
-                    </p>
-                    <p>
-                        <strong style="color: brown;">Your safety is our priority — because every life matters.</strong>
-                    </p>
-                </div>
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+    /* Preloader styles */
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .preloader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .loader {
+        width: 80px;
+        height: 80px;
+        position: relative;
+    }
+
+    .loader:before,
+    .loader:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: var(--accent);
+        opacity: 0.6;
+        animation: pulse 2s ease-out infinite;
+    }
+
+    .loader:after {
+        animation-delay: 1s;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0);
+            opacity: 0.6;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
+
+    /* Define main color scheme and variables */
+    :root {
+        --primary: #0056D2;
+        --accent: #00C4B4;
+        --bg-gradient-start: #E0F7FA;
+        --bg-gradient-end: #E3F2FD;
+        --bs-primary: #0056D2;
+        --bs-light: #f8f9fa;
+        --bs-white: #fff;
+        --bs-dark: #22325a;
+    }
+    /* Base styles */
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+        color: #333;
+    }    /* Hero section styles */    .hero {
+        background: linear-gradient(70deg, rgba(23, 23, 59, 0.85) 0%, rgba(0, 196, 180, 0.45) 100%),
+        url('assets/images/hero_image_final_1.png'); /* Construction worker with harness */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        color: #fff;
+        height: 100vh;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+    .hero h1 {
+        font-size: 3.15rem;
+        font-weight: 700;
+        color: rgb(247, 38, 38);
+    }    .hero p {
+        color: #fff;
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }    /* Hero button styles */
+    .hero .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        margin: 0 8px 10px 0;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        cursor: pointer;
+        min-width: 140px;
+        text-align: center;
+    }    /* Primary button - Blue (rounded left, straight right) */
+    .hero .btn-primary {
+        background-color: #1e40af;
+        color: white;
+        border-color: #1e40af;
+        border-radius: 50px 0 0 50px; /* Rounded left, straight right */
+    }
+
+    .hero .btn-primary:hover {
+        background-color: #1d4ed8;
+        border-color: #1d4ed8;
+        transform: translateY(-1px);
+        color: white;
+        text-decoration: none;
+    }    /* Warning button - Warning Orange (straight left, rounded right) */
+    .hero .btn-warning {
+        background-color: #ffc107;
+        color: #000;
+        border-color: #ffc107;
+        border-radius: 0 50px 50px 0; /* Straight left, rounded right */
+    }
+
+    .hero .btn-warning:hover {
+        background-color: #ffcd39;
+        border-color: #ffcd39;
+        transform: translateY(-1px);
+        color: #000;
+        text-decoration: none;
+    }/* Light button - Outlined (rectangular) */
+    .hero .btn-light {
+        background-color: transparent;
+        color: #f4f7fa;
+        border: 2px solid #475569;
+        border-radius: 8px; /* Rectangular shape */
+    }
+
+    .hero .btn-light:hover {
+        background-color: #475569;
+        color: white;
+        border-color: #475569;
+        transform: translateY(-1px);
+        text-decoration: none;
+    }
+
+    /* Responsive button sizing */
+    @media (max-width: 768px) {
+        .hero .btn {
+            padding: 12px 25px;
+            font-size: 14px;
+            margin: 0 5px 10px 0;
+            min-width: 130px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero .btn {
+            padding: 10px 20px;
+            font-size: 13px;
+            margin: 5px 0;
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    /* Section headings */
+    .section-heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: var(--primary);
+    }
+    .section-heading i {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+        color: var(--accent);
+    }
+    /* Modern About Us Section Header */
+    .section-heading-modern {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+    }
+    .section-label {
+        color: var(--accent);
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(90deg, #00C4B4 0%, #0056D2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .section-title {
+        font-size: 2.7rem;
+        font-weight: 800;
+        color: #22325a;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        line-height: 1.15;
+    }
+    .section-underline {
+        width: 70px;
+        height: 5px;
+        background: linear-gradient(90deg, #00C4B4 0%, #0056D2 100%);
+        border-radius: 3px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        overflow: hidden;
+    }    .section-underline .moving-dot {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 7px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        animation: moveDot 3s linear infinite;
+    }
+    @keyframes moveDot {
+        0% {
+            left: 0%;
+        }
+        50% {
+            left: 100%;
+        }
+        100% {
+            left: 0%;
+        }
+    }
+    /* Card styles - removed unnecessary borders and shadows */
+    .card {
+        border: none;
+        transition: transform .3s ease;
+        background: transparent;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    /* Card image styles */
+    .card-img-top {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        max-height: 250px;
+    }
+    /* Button and icon styles */
+    .btn-detail {
+        background: var(--accent);
+        border: none;
+        color: #fff;
+    }
+    .service-icon,
+    .product-icon {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: .5rem;
+    }    /* About Us Header Gradient Style */
+    .about-header {
+        background: linear-gradient(90deg, #18294a 60%, #466ab3 100%);
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-align: center;
+        padding: .5rem 0;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+    }
+    /* About Section Title Style */
+    .about-title {
+        color: #22325a;
+        font-size: 2.2rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .about-underline {
+        width: 60px;
+        height: 6px;
+        background: #22325a;
+        border-radius: 3px;
+        margin-bottom: 1.5rem;
+    }
+    .about-desc {
+        color: #22325a;
+        font-size: 1.08rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
+
+
+@media (max-width: 576px) {
+    .service-header-title {
+        font-size: 2rem;
+    }
+    .service-header-desc {
+        font-size: 0.98rem;
+    }
+}
+.hero.hero-slide-2 {
+  background: linear-gradient(70deg, rgba(20, 20, 20, 0.7) 0%, rgba(0, 196, 180, 0.35) 100%),
+    url('assets/images/hero_image_final_2.png'); /* hero slide 2 */
+  background-size: cover;
+  background-position: center;
+}
+.hero.hero-slide-3 {
+  background: linear-gradient(70deg, rgba(255, 87, 34, 0.8) 0%, rgba(255, 193, 7, 0.4) 100%),
+    url('assets/images/hero_image_final_3.png'); /* Worker with PPE gear */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Video background styles for third slide */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  min-height: 100vh;
+  
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(70deg, rgba(255, 87, 34, 0.6) 0%, rgba(255, 193, 7, 0.3) 100%);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+/* Ensure hero section maintains height with video */
+.hero.hero-slide-3.video-active {
+  background-image: none;
+  height: 100vh;
+  min-height: 700px;
+}
+
+/* Responsive hero height fixes */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .hero-video,
+  .hero-video-overlay {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 100vh;
+    min-height: 500px;
+  }
+}
+
+.hero-content {
+  transition: opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);
+}
+.hero-content.hide {
+  opacity: 0;
+  transform: translateX(-60px);
+  pointer-events: none;
+}
+.hero-content.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* Specific style for the skylight cover image to fix the blurry issue */
+
+/* Remove any blurriness from Jekyll processed images */
+img[src*="{{ site.baseurl }}"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Modern Product Card Styles */
+.products-modern-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+  justify-content: center;
+}
+.product-card-modern {
+  background: #fff;
+  border-radius: 1.1rem;
+  box-shadow: 0 6px 24px rgba(0,86,210,0.10);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: none;
+  width: 356px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  will-change: transform;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+.product-card-modern:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(0,86,210,0.18);
+}
+.product-card-modern .product-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-radius: 0 !important;
+  background: #f8f9fa;
+  display: block;
+  image-rendering: auto;
+  transition: all 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.product-card-modern .product-body {
+  padding: 1.1rem 1.1rem 1.1rem 1.1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+}
+.product-card-modern .product-title {
+  color: #22325a;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.product-card-modern .product-desc {
+  color: #5a5a5a;
+  font-size: 1.01rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+  min-height: 48px;
+}
+.product-card-modern .product-btns {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: auto;
+}
+.product-card-modern .btn-readmore {
+  background: linear-gradient(90deg, #0056D2 0%, #00C4B4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.98rem;
+  transition: background 0.2s;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.product-card-modern .btn-readmore:hover {
+  background: #333;
+}
+.product-card-modern .btn-joinnow {
+  background: linear-gradient(90deg, #09853c 0%, #0056D2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.98rem;
+  transition: background 0.2s;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.product-card-modern .btn-joinnow:hover {
+  background: #157347;
+}
+@media (max-width: 600px) {
+  .products-modern-row { gap: 1.2rem 0.5rem; }
+  .product-card-modern { width: 100%; }
+  .product-card-modern .product-img { 
+    height: 180px;
+    object-fit: contain;
+    background: #f8f9fa;
+    image-rendering: auto;
+  }
+}
+
+/* Service Section Styles */
+#services {
+    background: #f8f9fa;
+    padding: 60px 0;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+
+    margin-bottom: 1rem;
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #22325a;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments for service cards */
+@media (max-width: 768px) {
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .card h5 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-header-title {
+        font-size: 2rem;
+    }
+    .service-header-desc {
+        font-size: 0.98rem;
+    }
+}
+.hero.hero-slide-2 {
+  background: linear-gradient(70deg, rgba(20, 20, 20, 0.7) 0%, rgba(0, 196, 180, 0.35) 100%),
+    url('assets/images/hero_image_final_2.png'); /* hero slide 2 */
+  background-size: cover;
+  background-position: center;
+}
+.hero.hero-slide-3 {
+  background: linear-gradient(70deg, rgba(255, 87, 34, 0.8) 0%, rgba(255, 193, 7, 0.4) 100%),
+    url('assets/images/hero_image_final_3.png'); /* Worker with PPE gear */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Video background styles for third slide */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  min-height: 100vh;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(70deg, rgba(255, 87, 34, 0.6) 0%, rgba(255, 193, 7, 0.3) 100%);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+/* Ensure hero section maintains height with video */
+.hero.hero-slide-3.video-active {
+  background-image: none;
+  height: 100vh;
+  min-height: 700px;
+}
+
+/* Responsive hero height fixes */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .hero-video,
+  .hero-video-overlay {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 100vh;
+    min-height: 500px;
+  }
+}
+
+.hero-content {
+  transition: opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);
+}
+.hero-content.hide {
+  opacity: 0;
+  transform: translateX(-60px);
+  pointer-events: none;
+}
+.hero-content.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* Specific style for the skylight cover image to fix the blurry issue */
+
+/* Remove any blurriness from Jekyll processed images */
+img[src*="{{ site.baseurl }}"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Modern Product Card Styles */
+.products-modern-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+  justify-content: center;
+}
+.product-card-modern {
+  background: #fff;
+  border-radius: 1.1rem;
+  box-shadow: 0 6px 24px rgba(0,86,210,0.10);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: none;
+  width: 356px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  will-change: transform;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+.product-card-modern:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(0,86,210,0.18);
+}
+.product-card-modern .product-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-radius: 0 !important;
+  background: #f8f9fa;
+  display: block;
+  image-rendering: auto;
+  transition: all 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.product-card-modern .product-body {
+  padding: 1.1rem 1.1rem 1.1rem 1.1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+}
+.product-card-modern .product-title {
+  color: #22325a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.product-card-modern .product-desc {
+  color: #5a5a5a;
+  font-size: 1.01rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+  min-height: 48px;
+}
+.product-card-modern .product-btns {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: auto;
+}
+.product-card-modern .btn-readmore {
+  background: linear-gradient(90deg, #0056D2 0%, #00C4B4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.98rem;
+  transition: background 0.2s;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.product-card-modern .btn-readmore:hover {
+  background: #333;
+}
+.product-card-modern .btn-joinnow {
+  background: linear-gradient(90deg, #09853c 0%, #0056D2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.98rem;
+  transition: background 0.2s;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.product-card-modern .btn-joinnow:hover {
+  background: #157347;
+}
+@media (max-width: 600px) {
+  .products-modern-row { gap: 1.2rem 0.5rem; }
+  .product-card-modern { width: 100%; }
+  .product-card-modern .product-img { 
+    height: 180px;
+    object-fit: contain;
+    background: #f8f9fa;
+    image-rendering: auto;
+  }
+}
+</style>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+  <!-- Hero Section -->
+  <section class="hero" id="hero-section" data-aos="fade-down" data-aos-duration="1000">
+    <!-- Video background for third slide -->
+    <video class="hero-video" id="hero-video-3" autoplay muted loop style="display: none;">
+      <source src="assets/videos/ppe-hero-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- Video overlay for better text readability -->
+    <div class="hero-video-overlay" id="hero-overlay-3" style="display: none;"></div>
+
+    <div class="hero-content" id="hero-content-1">
+      <h1 id="hero-title-1">Your Safety, Our Priority!</h1>
+      <p id="hero-desc-1">Premium Personal Protecting equipment and Life Line Systems with fall protection engineered for your safety.</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">ABOUT US</a>
+        <a href="#services" class="btn btn-light">OUR SERVICES</a>
+        <a href="#products" class="btn btn-warning">OUR PRODUCTS</a>
+      </div>    </div><div class="hero-content" id="hero-content-2" style="display:none">
+      <h1 id="hero-title-2" style="color: var(--accent);">Premium Life Line System</h1>
+      <p id="hero-desc-2" style="color: #fd3a3a;">Secure every steps - Advanced Lifeline Safety Solutions</p>
+      <a href="life-line-system.html" class="btn btn-light btn-lg" style="background: transparent; color: #fff; border: 2px solid #fff; font-weight: 600; border-radius: 2rem; padding: 0.75rem 2.5rem; margin-right: 1rem;">Learn More</a>
+      <a href="/products/lifeline.html" class="btn btn-accent btn-lg" style="background: #ffc107; color: #000; font-weight: 600; border-radius: 2rem; padding: 0.75rem 2.5rem;">Get Quote</a>
+    </div>
+    <div class="hero-content" id="hero-content-3" style="display:none">
+      <h1 id="hero-title-3" style="color: white;">Personal Protection Equipment</h1>
+      <p id="hero-desc-3" style="color: #fff;">Comprehensive PPE solutions designed to keep you safe in any workplace environment.</p>
+      <a href="ppe.html" class="btn btn-warning btn-lg" style="font-weight: 600; border-radius: 2rem; padding: 0.75rem 2.5rem; margin-right: 1rem;">Learn More</a>
+      <a href="contact-us.html" class="btn btn-light btn-lg" style="font-weight: 600; border-radius: 2rem; padding: 0.75rem 2.5rem;">Get Quote</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5" id="about" style="background: #f8f9fa;">
+    <div class="container">
+      <!-- Modern About Us Section Header -->
+      <div class="section-heading-modern text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Innovating the Future of Safety</h2>
+        <div class="section-underline mx-auto"><span class="moving-dot"></span></div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Left Column: Image Gallery -->
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+          <div class="h-100">          <!-- Main Image -->          <div class="mb-4">
+            <img src="assets/images/welcome.png" alt="About Us Main" class="img-fluid w-100">
+          </div>
+          <!-- Small Images Grid -->
+          <div class="row g-3">            <div class="col-6">
+              <div>
+                <img src="assets/images/about_us_landscape_01.png" alt="Creative Workspace" class="img-fluid w-100">
+              </div>
             </div>
-        </div>
-    </section>
-    <!-- Our Mission Section -->
-    <section class="mission-section py-5" style="background: linear-gradient(90deg, #e3f2fd 60%, #f0f4ff 100%);">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <h2 class="mb-4 d-flex align-items-center gap-2" style="color:navy;">
-                        <i class="bi bi-bullseye" style="font-size:2rem;color:#0d6efd;"></i>
-                        <span>Our Mission</span>
-                    </h2>
-                    <p>
-                        Our mission is to empower organizations to create safer, healthier, and more productive environments. We strive to be the trusted partner in safety by providing innovative solutions, expert guidance, and unwavering support—helping our clients achieve their safety goals and safeguard their most valuable assets.
-                    </p>
-                </div>
-                <div class="col-md-5 mb-4 mb-md-0">
-                    <img src="{{ site.baseurl }}/assets/images/our_mission.jpg" alt="Our Mission" class="img-fluid rounded shadow-lg border border-3 border-info-subtle">
-                </div>
+            <div class="col-6">
+              <div>
+                <img src="assets/images/about_us_landscape_02.png" alt="Global Connections" class="img-fluid w-100">
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-    <!-- Our Services Section -->
-    <section class="services-section py-5" style="background: linear-gradient(90deg, #f8f9fa 60%, #e3f2fd 100%);">
-        <div class="container">
-            <h2 class="mb-5 text-center d-flex align-items-center justify-content-center gap-2" style="color:navy;">
-                <i class="bi bi-gear-fill" style="font-size:2rem;color:#0d6efd;"></i>
-                <span>Our Services</span>
-            </h2>
-            <div class="row">
-                <!-- Delivery & Installation Card -->
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow border-0" style="background: #e3f2fd;">
-                        <img src="{{ site.baseurl }}/assets/images/installation.jpg" class="card-img-top rounded-top border-bottom border-primary-subtle" alt="Delivery & Installation">
-                        <div class="card-body">
-                            <h5 class="card-title text-center h5">Delivery & Installation</h5>
-                            <p class="card-text text-center">
-                                We ensure prompt delivery and professional installation of all safety products, guaranteeing optimal performance and compliance from day one.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Training & Consultancy Card -->
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow border-0" style="background: #f0f4ff;">
-                        <img src="{{ site.baseurl }}/assets/images/training.jpg" class="card-img-top rounded-top border-bottom border-info-subtle" alt="Training & Consultancy">
-                        <div class="card-body">
-                            <h5 class="card-title text-center h5">Training & Consultancy</h5>
-                            <p class="card-text text-center">
-                                Our experts provide hands-on training and consultancy services to empower your team with the knowledge and skills for effective safety management.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Live Demo Card -->
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow border-0" style="background: #e3f2fd;">
-                        <img src="{{ site.baseurl }}/assets/images/live_demo.jpg" class="card-img-top rounded-top border-bottom border-primary-subtle" alt="Live Demo">
-                        <div class="card-body">
-                            <h5 class="card-title text-center h5">Service Demo</h5>
-                            <p class="card-text text-center">
-                                Experience our products in action with live demonstrations, helping you make informed decisions tailored to your unique requirements.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Inspection and Load Testing Card -->
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow border-0" style="background: #f0f4ff;">
-                        <img src="{{ site.baseurl }}/assets/images/inspection.png" class="card-img-top rounded-top border-bottom border-info-subtle" alt="Inspection and Load Testing">
-                        <div class="card-body">
-                            <h3 class="card-title text-center h5">Site Survey and Load Testing</h3>
-                            <p class="card-text text-center">
-                                Our certified inspectors conduct thorough safety equipment inspections and load testing to ensure your equipment meets all safety standards and regulations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        </div>
+
+        <!-- Right Column: Content -->
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+          <div class="h-100 p-4 bg-white rounded-3 shadow-sm">
+            <div class="about-title">INNOVATING THE FUTURE</div>
+            <div class="about-underline"></div>
+            <div class="about-desc mb-4">
+              We are a passionate team dedicated to delivering innovative safety solutions for a rapidly changing world. Our commitment to excellence, creativity, and collaboration drives us to set new standards in the industry. From concept to execution, we ensure every project is handled with expertise and care, building lasting relationships with our clients.
             </div>
-        </div>
-    </section>
-    <!-- Our Products Section -->
-    <section id="our-products" class="products-section py-5" style="background: linear-gradient(90deg, #e3f2fd 60%, #f8f9fa 100%);">
-        <div class="container">
-            <h2 class="mb-5 text-center d-flex align-items-center justify-content-center gap-2" style="color:navy;">
-                <i class="bi bi-box-seam" style="font-size:2rem;color:#0d6efd;"></i>
-                <span>Our Products</span>
-            </h2>
-            <div class="row g-4 justify-content-center">
-                <!-- Personal Protective Equipment Category -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow border-0" style="background: #f0f4ff;">
-                        <a href="ppe.html" class="text-decoration-none">
-                            <img src="{{ site.baseurl }}/assets/images/ppe.jpg" class="card-img-top rounded-top border-bottom border-primary-subtle" alt="Personal Protective Equipment">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">Personal Protective Equipment</h4>
-                            <p class="card-text">
-                                Our PPE range includes essential gear designed to protect workers from workplace hazards, ensuring safety and compliance in every environment.
-                            </p>
-                            <a href="ppe.html" class="btn btn-primary">View PPE Products</a>
-                        </div>
-                    </div>
+            <a href="about.html" class="btn btn-primary btn-lg rounded-pill px-4">
+              Read More
+              <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+
+            <!-- Features Cards -->
+            <div class="row g-4 mt-4">
+              <!-- Dedicated Team Support -->
+              <div class="col-md-6">
+                <div class="p-4 rounded-3" style="background-color: rgba(0, 86, 210, 0.1);">
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-people-fill fs-4 text-primary me-2"></i>
+                    <h5 class="fw-bold mb-0 text-primary">Dedicated Team Support</h5>
+                  </div>
+                  <p class="mb-0 text-secondary">Our highly skilled professionals are committed to providing personalized and reliable safety solutions for every engagement.</p>
                 </div>
-                <!-- Life Line System Category -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow border-0" style="background: #e3f2fd;">
-                        <a href="life-line-system.html" class="text-decoration-none">
-                            <img src="{{ site.baseurl }}/assets/images/life_line_system.jpg" class="card-img-top rounded-top border-bottom border-info-subtle" alt="Life Line System">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">Life Line System</h4>
-                            <p class="card-text">
-                                Engineered systems for continuous fall protection, enabling safe movement at heights across various industrial settings.
-                            </p>
-                            <a href="life-line-system.html" class="btn btn-primary">View Life Line Systems</a>
-                        </div>
-                    </div>
+              </div>
+              <!-- Forward-Thinking Approach -->
+              <div class="col-md-6">
+                <div class="p-4 rounded-3" style="background-color: rgba(255, 179, 143, 0.3);">
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-lightbulb-fill fs-4 text-primary me-2"></i>
+                    <h5 class="fw-bold mb-0 text-primary">Forward-Thinking Approach</h5>
+                  </div>
+                  <p class="mb-0 text-secondary">We embrace innovative methodologies to develop strategic solutions that drive lasting success.</p>
                 </div>
-                <!-- Fall Protection System Category -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow border-0" style="background: #f0f4ff;">
-                        <a href="fall-protection-system.html" class="text-decoration-none">
-                            <img src="{{ site.baseurl }}/assets/images/fall_protection_system.png" class="card-img-top rounded-top border-bottom border-primary-subtle" alt="Fall Protection System">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">Fall Protection System</h4>
-                            <p class="card-text">
-                                Comprehensive solutions including harnesses, anchors, and arresters to prevent falls and ensure worker safety at heights.
-                            </p>
-                            <a href="fall-protection-system.html" class="btn btn-primary">View Fall Protection Systems</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <!-- Our Services Button -->
+            <div class="mt-4 text-center">
+              <a href="#services" class="btn btn-accent btn-lg" style="background: var(--accent); color: #fff; font-weight: 600; border-radius: 2rem; padding: 0.75rem 2.5rem;">Our Services</a>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Section Start -->
+<section id="services" style="background: #f8f9fa; padding: 60px 0;">
+  <div class="container">
+    <div class="section-heading-modern text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+      <span class="section-label">Our Services</span>
+      <h2 class="service-section-title">Discover our comprehensive range of professional services designed to ensure safety, efficiency, and expert support for your projects.</h2>
+      <div class="section-underline mx-auto"><span class="moving-dot"></span></div>
+    </div>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="card shadow-sm h-100 text-center p-4">
+          <div class="service-icon mb-3"><i class="fa fa-truck fa-2x" style="color: rgb(247, 38, 38);"></i></div>
+          <h5 class="mb-3">Delivery & Installation</h5>
+          <p>Expert delivery and professional installation services for all our safety systems and equipment.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="card shadow-sm h-100 text-center p-4">
+          <div class="service-icon mb-3"><i class="fa fa-chalkboard-teacher fa-2x"></i></div>
+          <h5 class="mb-3">Training & Consultancy</h5>
+          <p>Comprehensive training and expert consultancy to ensure your team is fully prepared and compliant.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="card shadow-sm h-100 text-center p-4">
+          <div class="service-icon mb-3"><i class="fa fa-play-circle fa-2x" style="color: #00C4B4;"></i></div>
+          <h5 class="mb-3">Service Demo</h5>
+          <p>Live demonstrations to showcase the effectiveness and operation of our safety solutions.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="card shadow-sm h-100 text-center p-4">
+          <div class="service-icon mb-3"><i class="fa fa-search-location fa-2x" style="color: #157347;"></i></div>
+          <h5 class="mb-3">Site Survey & Load Testing</h5>
+          <p>Thorough site surveys and load testing to guarantee optimal safety and compliance for your environment.</p>
+        </div>
+      </div>
+      <div class="mt-4 text-center">
+        <a href="services.html" class="btn btn-success " style=" color: #fff; font-weight: 600; border-radius: 2rem; padding: 0.75rem 2.5rem;">Learn More About Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Service Section End -->
+
+<!-- Our Products Section Start -->
+<section class="py-5" id="products" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="section-heading-modern text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+      <span class="section-label">Our Products</span>
+      <h2 class="section-title">Our Popular Products</h2>
+      <div class="section-underline mx-auto"><span class="moving-dot"></span></div>
+    </div>
+    <div class="products-modern-row">
+      <!-- Product 1 -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" style="background-color: azure;">
+        <img src="{{ site.baseurl }}/assets/images/ppe.png" class="product-img" alt="Personal Protective Equipment" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Personal Protective Equipment</div>
+          <div class="product-desc">Certified harnesses, helmets, and accessories for full-body protection.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/ppe.html" class="btn-readmore">Learn More</a>
+            <a href="/products/ppe.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: aliceblue;">
+        <img src="{{ site.baseurl }}/assets/images/life_line_system.png" class="product-img" alt="Life Line System" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Life Line System</div>
+          <div class="product-desc">Durable cable assemblies with tensioners and intermediate supports.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/lifeline.html" class="btn-readmore">Learn More</a>
+            <a href="/products/lifeline.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" style="background-color: azure">
+        <img src="{{ site.baseurl }}/assets/images/fall_protection_system.png" class="product-img" alt="Fall Arrest System" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Fall Arrest System</div>
+          <div class="product-desc">Self-retracting lifelines and shock absorbers for rapid fall arrest.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/arrest.html" class="btn-readmore">Learn More</a>
+            <a href="/products/arrest.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 4: Rooftop Guardrail -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800" style="background-color: aliceblue;">
+        <img src="{{ site.baseurl }}/assets/images/rooftop_guardrail.png" class="product-img" alt="Rooftop Guardrail" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Rooftop Guardrail</div>
+          <div class="product-desc">Engineered guardrail systems for rooftop fall protection.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/rooftop-guardrail.html" class="btn-readmore">Learn More</a>
+            <a href="/products/rooftop-guardrail.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 5: Skylight Cover -->
+      <div class="product-card-modern" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" style="background-color: azure;">
+        <img src="{{ site.baseurl }}/assets/images/skylight_protection_cover.png" class="product-img" alt="Skylight Cover" loading="lazy" width="356" height="220" decoding="async">
+        <div class="product-body">
+          <div class="product-title">Skylight Protection Cover</div>
+          <div class="product-desc">Durable covers to secure skylights and prevent accidental falls.</div>
+          <div class="product-btns justify-content-center">
+            <a href="/products/skylight-cover.html" class="btn-readmore">Learn More</a>
+            <a href="/products/skylight-cover.html" class="btn-joinnow">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Products Section End -->
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            // Initialize AOS
+            AOS.init({
+                once: false,
+                mirror: true,
+                offset: 50
+            });
+
+            // Preloader
+            window.addEventListener('load', () => {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('fade-out');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            });            // Hero Section Code
+            let currentHero = 1;
+            const heroSection = document.getElementById('hero-section');
+            const heroContent1 = document.getElementById('hero-content-1');
+            const heroContent2 = document.getElementById('hero-content-2');
+            const heroContent3 = document.getElementById('hero-content-3');
+            const heroVideo3 = document.getElementById('hero-video-3');
+            const heroOverlay3 = document.getElementById('hero-overlay-3');
+
+            function showHeroSlide(slide) {
+              // Hide all slides first
+              heroContent1.style.display = 'none';
+              heroContent2.style.display = 'none';
+              heroContent3.style.display = 'none';
+              
+              // Hide video and overlay by default
+              if (heroVideo3) {
+                heroVideo3.style.display = 'none';
+                heroVideo3.pause();
+              }
+              if (heroOverlay3) {
+                heroOverlay3.style.display = 'none';
+              }
+              
+              // Remove all slide classes
+              heroSection.classList.remove('hero-slide-2', 'hero-slide-3', 'video-active');
+              
+              // Show the selected slide
+              if (slide === 1) {
+                heroContent1.style.display = 'block';
+                heroContent1.classList.add('show');
+                heroContent1.classList.remove('hide');
+              } else if (slide === 2) {
+                heroSection.classList.add('hero-slide-2');
+                heroContent2.style.display = 'block';
+                heroContent2.classList.add('show');
+                heroContent2.classList.remove('hide');
+              } else if (slide === 3) {
+                heroSection.classList.add('hero-slide-3', 'video-active');
+                heroContent3.style.display = 'block';
+                heroContent3.classList.add('show');
+                heroContent3.classList.remove('hide');
+                
+                // Show and play video for third slide
+                if (heroVideo3) {
+                  heroVideo3.style.display = 'block';
+                  heroVideo3.play();
+                }
+                if (heroOverlay3) {
+                  heroOverlay3.style.display = 'block';
+                }
+              }
+            }
+
+            setInterval(() => {
+              currentHero = currentHero === 3 ? 1 : currentHero + 1;
+              showHeroSlide(currentHero);
+            }, 5000);
+
+            // Initial state
+            showHeroSlide(1);
+        </script>
+</script>

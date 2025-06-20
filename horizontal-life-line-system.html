@@ -4,6 +4,75 @@ title: Horizontal Life Line System Components | HSSPL
 permalink: /horizontal-life-line-system.html
 ---
 
+<style>
+/* Hero section styles with high specificity */
+section.hero-section.hero-horizontal {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ site.baseurl }}/assets/images/horizontal_hero_bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    padding-top: 140px !important;
+    padding-bottom: 80px !important;
+    color: white !important;
+    min-height: 60vh !important;
+    position: relative !important;
+}
+
+/* Breadcrumb styles with high specificity */
+section.hero-section .breadcrumb.breadcrumb-custom {
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 8px 20px !important;
+    justify-content: center !important;
+    margin-bottom: 1.5rem !important;
+}
+
+section.hero-section .breadcrumb.breadcrumb-custom a {
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: color 0.3s !important;
+}
+
+section.hero-section .breadcrumb.breadcrumb-custom a:hover {
+    color: #ffd700 !important;
+}
+
+section.hero-section .breadcrumb.breadcrumb-custom .breadcrumb-item.active {
+    color: #ffd700 !important;
+}
+
+section.hero-section .breadcrumb.breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
+    color: #fff !important;
+}
+</style>
+
+<!-- Hero Section -->
+<section class="hero-section hero-horizontal d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Breadcrumb Navigation -->
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb breadcrumb-custom">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+                        <li class="breadcrumb-item"><a href="life-line-system.html">Lifeline System</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Horizontal Life Line</li>
+                    </ol>
+                </nav>
+                  <!-- Hero Content -->
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                        Horizontal Life Line System
+                    </h1>
+                    <p class="lead mb-0 mx-auto" style="font-size: 1.3rem; max-width: 600px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+                        Advanced fall protection systems designed for continuous safety across elevated workspaces
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Modern Quoted Intro Section with Even Larger Image and Adjusted Text -->
 <section class="py-4" style="background: #e3f2fd; border-radius: 1.2rem 1.2rem 0 0; margin-bottom: 0; box-shadow: 0 4px 24px 0 rgba(25, 118, 210, 0.10);">
@@ -112,7 +181,7 @@ permalink: /horizontal-life-line-system.html
       <div class="col d-flex flex-column align-items-center">
         <a href="traveler-or-glider.html" class="modern-card-link">
           <div class="modern-card">
-            <img src="{{ site.baseurl }}/assets/images/traveler_glider.jpg" alt="TRAVELER/ GLIDER" class="modern-card-img">
+            <img src="{{ site.baseurl }}/assets/images/traveler_or_glider.jpg" alt="TRAVELER/ GLIDER" class="modern-card-img">
             <div class="modern-card-title">TRAVELER/ GLIDER</div>
           </div>
         </a>
@@ -126,12 +195,12 @@ permalink: /horizontal-life-line-system.html
           </div>
         </a>
       </div>
-      <!-- Card 12: FASTNERS -->
+      <!-- Card 12: FASTENERS -->
       <div class="col d-flex flex-column align-items-center">
-        <a href="fastners.html" class="modern-card-link">
+        <a href="fasteners.html" class="modern-card-link">
           <div class="modern-card">
             <img src="{{ site.baseurl }}/assets/images/fastner_hhs.jpg" alt="FASTNERS" class="modern-card-img">
-            <div class="modern-card-title">FASTNERS</div>
+            <div class="modern-card-title">FASTENERS</div>
           </div>
         </a>
       </div>
